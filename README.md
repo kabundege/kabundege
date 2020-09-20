@@ -1,5 +1,5 @@
 ### Hi there, I'm [Christopher!](https://github.com/kabundege) 👋
-![Christopher](https://raw.githubusercontent.com/kabundege/kabundege/master/assets/edit.png)
+![Christopher](https://raw.githubusercontent.com/kabundege/kabundege/master/assets/edit.jpg)
 <p align="center"> 
   <b>Tour count<b>
   <br>
@@ -9,7 +9,7 @@
 ## 📫 How to reach me: 
  - 📧 christophekwizera1@gmail.com
  - ☎ **+250784824295**
- - 🙎 [**Twitter**](https://twitter.com/KabundegeC)
+ -  [**Twitter**](https://twitter.com/KabundegeC)
  - 🔗 [**Portfolio**](https://mario-frontend.herokuapp.com/more)
   
 **Languages and Tools:**  
