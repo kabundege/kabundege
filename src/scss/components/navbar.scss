@@ -1,0 +1,78 @@
+@import '../settings/settings';
+@font-face{
+    font-family: awasome;
+    src: url('../../fonts/WhichWitchyPersonalUseOnly-MVBLr.ttf');
+}
+
+.navbar{
+    background: $baseBackground/1.3;
+    width: 4%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    
+    a   {
+        padding: 10px 0px;
+        color: $text;
+    }
+
+    div {
+        text-align: center;
+        margin: auto 0;
+    }
+
+    .logo   {
+        margin-top: 0;
+        background: $textHover;
+
+        h3{
+            font-weight: bold;
+            font-family: roboto-regular;
+        }
+        p{
+            color: $text;
+            font-weight: bolder;
+            letter-spacing: 1px;
+            opacity: 0.6;
+        }
+    }  
+
+    .links  {
+        display: flex;
+        flex-flow: column;
+        font-size: 25px;
+        a{
+            margin: 5% 0;
+            text-transform: uppercase;
+
+            i   { 
+                font-size: larger 
+            }
+            p   { 
+                display: none;
+                font-size: 13px;
+            }
+
+            &:hover{
+                color: $textHover; 
+                i { display: none }
+                p { display:initial }
+            }
+        }
+        .active{
+            color: $textHover;
+        }
+    }
+    
+    .social {
+        display: grid;
+        margin-bottom: 0;
+        padding-bottom: 20px;
+        a{
+            i{ font-size: larger }
+            &:hover{
+                color: $textHover;
+            }
+        }
+    }
+}
