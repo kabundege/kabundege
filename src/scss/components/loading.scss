@@ -1,0 +1,22 @@
+@import '../settings/settings';
+@font-face{
+    font-family: awasome;
+    src: url('../../fonts/WhichWitchyPersonalUseOnly-MVBLr.ttf');
+}
+
+.loading{
+    width: 100%;
+    position: relative;
+    background: $baseBackground*1.12;
+    section{
+        position: absolute;
+        top:50%;
+        left: 50%;
+        transform: translate(-65%,-50%);
+        font-family: awasome;
+        color: $textHover;
+        div{
+            margin: 0 auto;
+        }
+    }
+}

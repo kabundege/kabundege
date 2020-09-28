@@ -22,7 +22,7 @@ button:disabled{
 
 .App{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   background: $baseBackground;
   min-height: 100vh;
 }
