@@ -1,9 +1,4 @@
 @import '../settings/settings';
-@font-face{
-    font-family: awasome;
-    src: url('../../fonts/WhichWitchyPersonalUseOnly-MVBLr.ttf');
-}
-
 .navbar{
     background: $baseBackground/1.3;
     height: 100vh;
@@ -27,6 +22,7 @@
         h3{
             font-weight: bold;
             font-family: roboto-regular;
+            text-shadow: 3px 2px 0px  rgba(255, 255, 255, 0.5)
         }
         p{
             color: $text;
@@ -39,7 +35,7 @@
     .links  {
         display: flex;
         flex-flow: column;
-        font-size: 25px;
+        font-size: 20px;
         a{
             margin: 5% 0;
             text-transform: uppercase;
@@ -66,7 +62,6 @@
     .social {
         display: grid;
         margin-bottom: 0;
-        padding-bottom: 20px;
         a{
             i{ font-size: larger }
             &:hover{

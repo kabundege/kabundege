@@ -1,0 +1,63 @@
+@import '../settings/settings';
+
+.parent{
+    display: flex;
+    flex-flow: row;
+    padding: 60px;
+    .content{
+        border-radius: 10px;
+        margin: auto;
+        padding: 20px;
+        color: $text;
+
+        div{
+            font-family: painter;
+            h1{ 
+                letter-spacing: 3px;
+                font-family: snow;
+                .BigC{
+                    color: $textHover;
+                }
+                span{
+                    transition: 0.5s ease;
+                    &:hover{
+                        font-size:50px;
+                    }
+                }
+            }
+            p{
+                font-family: serif;
+                font-weight: bold;
+                letter-spacing: 2px;
+                color: $textHover;
+                margin: -5% 0 5% 0%;
+            }
+            &::before{
+                content: '<h1>';
+                opacity: 0.5;
+                position: relative;
+                left:-5%;
+            }
+            &::after{
+                content: '</h1>';
+                opacity: 0.5;
+                position: relative;
+                left:-5%;
+            }
+        }
+        &::before{
+            content: '<body>';
+            font-family: painter;
+            opacity: 0.5;
+            position: relative;
+            left:-10%
+        }
+        &::after{
+            content: '</body>';
+            font-family: painter;
+            opacity: 0.5;
+            position: relative;
+            left:-10%
+        }
+    }
+}

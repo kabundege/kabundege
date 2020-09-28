@@ -6,8 +6,10 @@
 
 .loading{
     width: 100%;
-    position: relative;
-    background: $baseBackground*1.12;
+    height: 100%;
+    position: absolute;
+    background: $baseBackground;
+    z-index: 1;
     section{
         position: absolute;
         top:50%;
