@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import '../../scss/components/navbar.scss';
 
 export default class NavBar extends Component {
@@ -35,18 +35,18 @@ export default class NavBar extends Component {
                 </div>
 
                 <div className="social">
-                    <NavLink to="//twitter.com/KabundegeC">
+                    <Link to="//twitter.com/KabundegeC" target="_blank">
                         <i className="fab fa-twitter"></i>
-                    </NavLink>
-                    <NavLink to="//www.linkedin.com/in/christophe-kwizera-081123190/">
+                    </Link>
+                    <Link to="//www.linkedin.com/in/christophe-kwizera-081123190/" target="_blank">
                         <i className="fab fa-linkedin-in"></i>
-                    </NavLink>
-                    <NavLink to="//github.com/kabundege">
+                    </Link>
+                    <Link to="//github.com/kabundege" target="_blank">
                         <i className="fab fa-github"></i>
-                    </NavLink>
-                    <NavLink to="//web.facebook.com/christophe.kwizera.79">
+                    </Link>
+                    <Link to="//web.facebook.com/christophe.kwizera.79" target="_blank">
                         <i className="fab fa-facebook-f"></i>
-                    </NavLink>
+                    </Link>
                 </div>
 
             </div>
