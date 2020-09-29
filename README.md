@@ -9,7 +9,7 @@
 ## 📫 How to reach me: 
  - 📧 christophekwizera1@gmail.com
  - ☎ **+250784824295**
- -  [**Twitter**](https://twitter.com/KabundegeC)
+ - 🐦 [**Twitter**](https://twitter.com/KabundegeC)
  - 🔗 [**Portfolio**](https://kabundege.herokuapp.com/)
   
 **Languages and Tools:**  
