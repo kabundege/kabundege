@@ -35,7 +35,6 @@
     .links  {
         display: flex;
         flex-flow: column;
-        font-size: 20px;
         a{
             margin: 5% 0;
             text-transform: uppercase;
@@ -62,6 +61,7 @@
     .social {
         display: grid;
         margin-bottom: 0;
+        font-size: 15px;
         a{
             i{ font-size: larger }
             &:hover{

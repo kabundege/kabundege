@@ -15,7 +15,7 @@ export default () => {
       setLoading(false)
       setTimeout(()=> setLoading(true),500)
     }
-    setTimeout(()=> setLoading(false),5000)
+    setTimeout(()=> setLoading(false),3300)
   },[location.pathname])
 
   if(loading)

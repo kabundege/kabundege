@@ -2,7 +2,7 @@ import React from 'react'
 import '../../scss/components/home.scss';
 
 export default () => {
-    const heading = ['H','i',',','i','\'','m',' c','h','r','i','s','s','\,','S','o','f','t','w','a','r','e','  d','e','v','.'];
+    const heading = ['H','i',',','i','\'','m',' c','h','r','i','s','s',',','a ','S','o','f','t','w','a','r','e','  d','e','v','.'];
     return (
         <div className="parent">
             <div className="content">
@@ -18,7 +18,7 @@ export default () => {
                             }
                         })}
                     </h1>
-                    <p>FrontEnd | BackEnd | Mobile - Expert</p>
+                    <p>FrontEnd | BackEnd | Mobile <span role="img" aria-label="rocket">🚀</span> Expert </p>
                 </div>
             </div>
             <div className="styling">
