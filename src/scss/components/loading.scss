@@ -5,9 +5,10 @@
 }
 
 .loading{
-    width: 100%;
+    width: 95%;
     height: 100%;
     position: absolute;
+    right: 0;
     background: $baseBackground;
     z-index: 1;
     section{
