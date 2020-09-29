@@ -3,12 +3,10 @@
 .about{
     display: flex;
     flex-flow: row;
-    padding: 60px;
     .content{
-        flex: 0.5;
-        border-radius: 10px;
+        flex: 0.8;
         margin: auto 0;
-        padding: 20px;
+        padding-left: 80px;
         color: $text;
 
         div{
@@ -43,6 +41,7 @@
             p   {
                 font-family: serif;
                 text-align: left;
+                opacity: 0.8;
             }
         }
         &::before{
@@ -58,6 +57,32 @@
             opacity: 0.5;
             position: relative;
             left:-10%
+        }
+    }
+    .styling{
+        flex: 0.5;
+        margin: auto 2%;
+        background: $textHover;
+        border-radius: 10px;
+        position: relative;
+        text-align: center;
+        box-shadow: 10px 15px 5px 0px $text/2;
+
+        img{
+            width: 400px;
+            border-radius: 50%;
+            border: 2px solid lightgray;
+            padding-top: 10px;
+            margin-top: 2%;
+        }
+        &::before{
+            content: '☄';
+            color: white;
+            font-size: 50px;
+            transform: rotate(230deg);
+            position: absolute;
+            left: 13%;
+            opacity: 0.7;
         }
     }
 }

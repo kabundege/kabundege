@@ -4,13 +4,12 @@
     display: flex;
     width: 95%;
     flex-flow: row;
-    padding: 60px;
     .content{
-        // width: 60%;
+        flex: 0.8;
         border-radius: 10px;
         margin: auto;
-        padding: 20px;
         color: $text;
+        padding-left: 80px;
 
         div{
             font-family: painter;
@@ -23,7 +22,8 @@
                 span{
                     transition: 0.5s ease;
                     &:hover{
-                        font-size:50px;
+                        // font-size:50px;
+                        font-style: italic;
                     }
                 }
             }
@@ -63,14 +63,28 @@
         }
     }
     .styling{
-        // width: 45%;
+        flex: 0.5;
+        margin: auto 2%;
+        background: $textHover;
+        border-radius: 10px;
         position: relative;
+        text-align: center;
+        box-shadow: 10px 15px 5px 0px $text/2;
         img{
-            position: absolute;
-            opacity: 0.7;
-            // width: 100%;
+            width: 400px;
             border-radius: 50%;
-            transform: rotate(20deg);
+            border: 2px solid lightgray;
+            padding-top: 10px;
+            margin-top: 2%;
+        }
+        &::before{
+            content: '☄';
+            color: white;
+            font-size: 50px;
+            transform: rotate(230deg);
+            position: absolute;
+            left: 13%;
+            opacity: 0.7;
         }
     }
 }

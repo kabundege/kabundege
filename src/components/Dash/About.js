@@ -1,5 +1,6 @@
-import React from 'react'
+import React from 'react';
 import '../../scss/components/about.scss';
+import me from '../../assets/new.png';
 
 export default () => {
     const heading = ['A','b','o','u','t',' ','m','e','.'];
@@ -28,7 +29,7 @@ export default () => {
                 </section>
             </div>
             <div className="styling">
-                {/* <h1>Visit Rwanda</h1> */}
+                <img src={me} alt="me"/>
             </div>
         </div>
     )
