@@ -1,29 +1,47 @@
 @import '../settings/settings';
+@keyframes rotater{
+    0% { transform: rotate(20deg) }
+    50% { transform: rotate(40deg) }
+    100% { transform: rotate(20deg) }
+}
 
 .parent{
     display: flex;
     width: 95%;
     flex-flow: row;
+    @media screen and(max-width:700px) {
+        flex-flow: column-reverse;
+        width: 100%;
+    }
+
     .content{
         flex: 0.8;
         border-radius: 10px;
         margin: auto;
         color: $text;
         padding-left: 80px;
+        @media screen and(max-width:700px) {
+            padding-left: 0;
+            margin-left:10%;
+        }
 
         div{
             font-family: painter;
             h1{ 
                 letter-spacing: 3px;
                 font-family: snow;
+                @media screen and(max-width:700px) {
+                    font-size: 27px;
+                }
                 .BigC{
                     color: $textHover;
                 }
                 span{
-                    transition: 0.5s ease;
+                    // transition: 0.5s ease;
                     &:hover{
-                        // font-size:50px;
-                        font-style: italic;
+                        // font-style: italic;
+                        animation: rubberBand;
+                        animation-duration: 2s;
                     }
                 }
             }
@@ -33,6 +51,9 @@
                 letter-spacing: 2px;
                 color: $textHover;
                 margin: -5% 0 5% 0%;
+                @media screen and(max-width:700px) {
+                    font-size: 13px;
+                }
             }
             &::before{
                 content: '<h1>';
@@ -52,7 +73,7 @@
             font-family: painter;
             opacity: 0.5;
             position: relative;
-            left:-10%
+            left:-10%;
         }
         &::after{
             content: '</body>';
@@ -70,12 +91,22 @@
         position: relative;
         text-align: center;
         box-shadow: 10px 15px 5px 0px $text/2;
+        @media screen and(max-width:700px) {
+            margin: auto;
+            width: 60%;
+            margin: 15% 10% -20% auto ;
+        }
         img{
-            width: 400px;
+            width: 300px;
             border-radius: 50%;
             border: 2px solid lightgray;
             padding-top: 10px;
             margin-top: 2%;
+            animation: rotater 5s infinite ease;
+            @media screen and(max-width:700px) {
+                width: 200px;
+                transform: rotate(30deg);
+            }
         }
         &::before{
             content: '☄';
@@ -85,6 +116,10 @@
             position: absolute;
             left: 13%;
             opacity: 0.7;
+            @media screen and(max-width:700px) {
+                left: 0;
+                top: -6%;
+            }
         }
     }
 }

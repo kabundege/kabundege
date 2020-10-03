@@ -3,11 +3,19 @@
 .about{
     display: flex;
     flex-flow: row;
+    @media screen and(max-width:700px) {
+        flex-flow: column-reverse;
+        width: 100%;
+    }
     .content{
-        flex: 0.8;
+        flex: 0.6;
         margin: auto 0;
         padding-left: 80px;
         color: $text;
+        @media screen and(max-width:700px) {
+            padding-left: 0;
+            margin-left:10%;
+        }
 
         div{
             font-family: painter;
@@ -16,6 +24,10 @@
                 font-family: snow;
                 color: $textHover;
                 margin: 0;
+                
+                @media screen and(max-width:700px) {
+                    font-size: 35px;
+                }
                 span{
                     transition: 0.5s ease;
                     &:hover{
@@ -42,6 +54,12 @@
                 font-family: serif;
                 text-align: left;
                 opacity: 0.8;
+                @media screen and(max-width:700px) {
+                    font-size: 13px;
+                }
+            }
+            @media screen and(max-width:700px) {
+                padding: 0;
             }
         }
         &::before{
@@ -67,13 +85,22 @@
         position: relative;
         text-align: center;
         box-shadow: 10px 15px 5px 0px $text/2;
-
+        @media screen and(max-width:700px) {
+            margin: auto;
+            width: 60%;
+            margin: 10% 10% -5% auto ;
+        }
         img{
-            width: 400px;
+            width: 300px;
             border-radius: 50%;
             border: 2px solid lightgray;
             padding-top: 10px;
             margin-top: 2%;
+            animation: rotater 5s infinite ease;
+            @media screen and(max-width:700px) {
+                width: 200px;
+                transform: rotate(30deg);
+            }
         }
         &::before{
             content: '☄';
@@ -83,6 +110,10 @@
             position: absolute;
             left: 13%;
             opacity: 0.7;
+            @media screen and(max-width:700px) {
+                left: 0;
+                top: -6%;
+            }
         }
     }
 }

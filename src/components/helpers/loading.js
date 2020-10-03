@@ -19,7 +19,7 @@ export default () => {
   },[location.pathname])
 
   if(loading)
-  return (
+  return ( 
       <div className="loading">
           <section >
               <h3>Chriss is Thinking...</h3>

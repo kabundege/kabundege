@@ -3,6 +3,7 @@ import '../../scss/components/about.scss';
 import me from '../../assets/new.png';
 
 export default () => {
+    document.title = ' About |- Me';
     const heading = ['A','b','o','u','t',' ','m','e','.'];
     return (
         <div className="about">
@@ -19,12 +20,11 @@ export default () => {
                     <br/>
                     <p>
                         Well-organised person, problem solver, independent employee with high attention to detail. 
-                        Fan of MMA, outdoor activities, TV series and, recently, English literature. 
-                        A family person, father of two fractious boys, therefore remote employment is preferred.
+                        Fan & player of blues, outdoor activities, TV series and, recently, English literature.
                     </p>
                     <br/>
                     <p>
-                        Interested in the entire frontend spectrum and working on ambitious projects with positive people.
+                        Interested in the entire many development spectrum and working on ambitious projects with positive people.
                     </p>
                 </section>
             </div>
