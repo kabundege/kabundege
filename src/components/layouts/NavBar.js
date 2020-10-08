@@ -51,9 +51,10 @@ export default function NavBar() {
                 <Link to="//web.facebook.com/christophe.kwizera.79" target="_blank">
                     <i className="fab fa-facebook-f"></i>
                 </Link>
-                { width <= 700 && !Menu ? 
-                <i className="green-text  fas fa-bars" onClick={()=> setMenu(!Menu)}></i>:
-                <i className="green-text  fas fa-times" onClick={()=> setMenu(!Menu)}></i>
+                { width <= 700 ? 
+                    !Menu ?
+                    <i className="green-text  fas fa-bars" onClick={()=> setMenu(!Menu)}></i>:
+                    <i className="green-text  fas fa-times" onClick={()=> setMenu(!Menu)}></i>: null
                 }
             </div>
         </div>

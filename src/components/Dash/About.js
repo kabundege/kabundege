@@ -3,7 +3,6 @@ import '../../scss/components/about.scss';
 import me from '../../assets/new.png';
 
 export default () => {
-    document.title = ' About |- Me';
     const heading = ['A','b','o','u','t',' ','m','e','.'];
     return (
         <div className="about">
