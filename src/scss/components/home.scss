@@ -37,9 +37,7 @@
                     color: $textHover;
                 }
                 span{
-                    // transition: 0.5s ease;
                     &:hover{
-                        // font-style: italic;
                         animation: rubberBand;
                         animation-duration: 2s;
                     }
