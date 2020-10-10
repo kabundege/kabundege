@@ -5,10 +5,14 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap:2em;
     align-content: center;
+    @media screen and (max-width:700px){
+        grid-template-columns: 1fr;
+        grid-gap: 1em;
+        padding: 30px 0;
+    }
     .front{
         background:url('../../assets/laptop.jpg') no-repeat;
         background-size:cover;
-        // background-position-y: max($numbers: 50%);
     }
     .back{
         background:url('../../assets/server.jpg') no-repeat;
@@ -73,6 +77,9 @@
                 color:$textHover;
                 margin:10% 0;
                 margin-top:-20%;
+                @media screen and (max-width:700px){
+                    margin-top:0%;
+                }
                 i,img{ 
                     transform: perspective(800px) translateZ(100px);
                 }
