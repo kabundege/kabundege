@@ -1,0 +1,4 @@
+[1009/200331.102:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\student\AppData\Local\Microsoft\Edge\User Data\Crashpad\attachments\06279fee-c8bf-41c6-bd75-9028f496807f: The system cannot find the path specified. (0x3)
+[1009/200331.202:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\student\AppData\Local\Microsoft\Edge\User Data\Crashpad\attachments\5bc04c41-72dd-4caa-840a-233e6e4b2ddb: The system cannot find the path specified. (0x3)
+[1009/200331.209:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[1010/103714.603:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
