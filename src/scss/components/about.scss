@@ -4,8 +4,8 @@
     display: flex;
     flex-flow: row;
     @media screen and(max-width:700px) {
-        flex-flow: column-reverse;
-        width: 100%;
+        flex-flow: column;
+        justify-content: space-between;
     }
     .content{
         flex: 0.6;
@@ -51,15 +51,40 @@
         section {
             padding: 40px 0;
             p   {
-                font-family: serif;
+                font-family: 'Jura', sans-serif;
                 text-align: left;
                 opacity: 0.8;
+                font-weight: bold;
                 @media screen and(max-width:700px) {
                     font-size: 13px;
                 }
+                
             }
             @media screen and(max-width:700px) {
                 padding: 0;
+            }
+            &::before{
+                content: '<span>';
+                opacity: 0.5;
+                position: relative;
+                left:-5%;
+                font-weight: bolder;
+                color: #ff97c0;
+                font-family: painter;
+                @media screen and (max-width:700px){
+                    position: absolute;
+                    top: -50%;
+                    left: 2%;
+                }
+            }
+            &::after{
+                content: '</span>';
+                opacity: 0.5;
+                position: relative;
+                left:-5%;
+                color: #ff97c0;
+                font-weight: bolder;
+                font-family: painter;
             }
         }
         &::before{
@@ -75,45 +100,6 @@
             opacity: 0.5;
             position: relative;
             left:-10%
-        }
-    }
-    .styling{
-        flex: 0.5;
-        margin: auto 2%;
-        background: $textHover;
-        border-radius: 10px;
-        position: relative;
-        text-align: center;
-        box-shadow: 10px 15px 5px 0px $text/2;
-        @media screen and(max-width:700px) {
-            margin: auto;
-            width: 60%;
-            margin: 10% 10% -5% auto ;
-        }
-        img{
-            width: 300px;
-            border-radius: 50%;
-            border: 2px solid lightgray;
-            padding-top: 10px;
-            margin-top: 2%;
-            animation: rotater 5s infinite ease;
-            @media screen and(max-width:700px) {
-                width: 200px;
-                transform: rotate(30deg);
-            }
-        }
-        &::before{
-            content: '☄';
-            color: white;
-            font-size: 50px;
-            transform: rotate(230deg);
-            position: absolute;
-            left: 13%;
-            opacity: 0.7;
-            @media screen and(max-width:700px) {
-                left: 0;
-                top: -6%;
-            }
         }
     }
 }
