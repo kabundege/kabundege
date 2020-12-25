@@ -1,12 +1,15 @@
 import React from 'react';
-import '../../scss/components/home.scss';
 import me from '../../assets/new.png';
+import blob from '../../assets/blob.svg';
+import '../../scss/components/home.scss';
 
 export default () => {
     const heading = ['H','i',',','i','\'','m',' c','h','r','i','s','s',',','a ','S','o','f','t','w','a','r','e','  d','e','v','.'];
+
     return (
         <div className="parent">
-            <div className="content">
+            <div  
+                className="content">
                 <div> 
                     <h1>
                         { heading.map((letter,index)=>{
@@ -23,7 +26,8 @@ export default () => {
                 </div>
             </div>
             <div className="styling">
-                <img src={me} alt="me"/>
+                <img src={blob} alt="blob" className="blob"/>
+                <img src={me} alt="me" className="avatar"/>
             </div>
         </div>
     )

@@ -1,6 +1,6 @@
 import React from 'react';
+import eye from '../../assets/eye.svg';
 import '../../scss/components/skills.scss';
-import eye from '../../assets/eye.svg'
 
 export default () => {
     return(
@@ -33,8 +33,7 @@ export default () => {
                         <img src={eye} alt="close eye"/>
                     </button>
                     <ul>
-                        
-                    <li><img src="https://img.icons8.com/nolan/30/github.png" alt="backend icons"/>GitHub</li>
+                        <li><img src="https://img.icons8.com/nolan/30/github.png" alt="backend icons"/>GitHub</li>
                         <li><img src="https://img.icons8.com/nolan/30/javascript.png" alt="backend icons"/> <img src="https://img.icons8.com/color/48/000000/nodejs.png" alt="nodejs"/></li>
                         <li><img src="https://img.icons8.com/color/30/000000/firebase.png" alt="backend icons"/> Firebase</li>
                         <li><img src="https://img.icons8.com/nolan/30/mysql.png" alt="backend icons"/> Sequelize </li>

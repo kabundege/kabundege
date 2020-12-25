@@ -1,6 +1,7 @@
 *{
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 html{
     min-height: 100%;
@@ -9,7 +10,13 @@ body{
     font-family: 'Roboto',Helvetica, Arial, sans-serif;
     font-size: 16px;
     min-height: 100%;
-    background: $baseBackground;
+    background: url('../../assets/new.svg') no-repeat;
+    background-position: bottom;
+    background-color: #333;
+    @media screen and (max-width:700px){
+        background-size: cover;
+        background-position: left;
+    }
 }
 
 button{
@@ -22,11 +29,22 @@ button:disabled{
 
 .App{
   display: flex;
-  background: $baseBackground;
-  min-height: 100vh;
   flex-direction: row;
+  align-items: center;
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
   @media screen and(max-width:700px) {
       flex-direction: column;
+      overflow-y: visible;
   }
 }
 
+.particles{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}

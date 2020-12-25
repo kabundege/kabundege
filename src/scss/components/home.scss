@@ -1,23 +1,24 @@
 @import '../settings/settings';
 @keyframes rotater{
-    0% { transform: rotate(20deg) }
-    50% { transform: rotate(40deg) }
-    100% { transform: rotate(20deg) }
+    0% { transform: rotate(0deg) }
+    100% { transform: rotate(360deg) }
 }
 
 .parent{
+    width: 100%;
+    height: 100%;
     display: flex;
-    width: 95%;
-    flex-flow: row;
+    justify-content: space-around;
+    align-items: center;
+
     @media screen and(max-width:700px) {
-        flex-flow: column-reverse;
+        flex-flow: column;
+        justify-content: space-between;
         width: 100%;
     }
 
     .content{
-        flex: 0.8;
         border-radius: 10px;
-        margin: auto;
         color: $text;
         padding-left: 80px;
         @media screen and(max-width:700px) {
@@ -27,11 +28,14 @@
 
         div{
             font-family: painter;
+            display: flex;
+            flex-flow: column;
             h1{ 
-                letter-spacing: 3px;
+                letter-spacing: 2px;
                 font-family: snow;
                 @media screen and(max-width:700px) {
                     font-size: 27px;
+                    letter-spacing: 0;
                 }
                 .BigC{
                     color: $textHover;
@@ -48,9 +52,34 @@
                 font-weight: bold;
                 letter-spacing: 2px;
                 color: $textHover;
-                margin: -5% 0 5% 0%;
+                margin-bottom:5%;
+                position: relative;
                 @media screen and(max-width:700px) {
                     font-size: 13px;
+                }
+
+                &::before{
+                    content: '<span>';
+                    opacity: 0.5;
+                    position: relative;
+                    left:-2%;
+                    font-weight: bolder;
+                    color: #ff97c0;
+                    font-family: painter;
+                    @media screen and (max-width:700px){
+                        position: absolute;
+                        top: -50%;
+                        left: 2%;
+                    }
+                }
+                &::after{
+                    content: '</span>';
+                    opacity: 0.5;
+                    position: relative;
+                    left:2%;
+                    color: #ff97c0;
+                    font-weight: bolder;
+                    font-family: painter;
                 }
             }
             &::before{
@@ -81,42 +110,33 @@
             left:-10%
         }
     }
+
     .styling{
-        flex: 0.5;
-        margin: auto 2%;
-        background: $textHover;
-        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         position: relative;
-        text-align: center;
-        box-shadow: 10px 15px 5px 0px $text/2;
-        @media screen and(max-width:700px) {
-            margin: auto;
-            width: 60%;
-            margin: 15% 10% -20% auto ;
-        }
-        img{
-            width: 300px;
-            border-radius: 50%;
-            border: 2px solid lightgray;
-            padding-top: 10px;
-            margin-top: 2%;
-            animation: rotater 5s infinite ease;
-            @media screen and(max-width:700px) {
-                width: 200px;
-                transform: rotate(30deg);
+        .avatar{
+            width: 100%;
+            border-radius: 100%;
+            transform: rotate(20deg);
+            @media screen and (max-width:700px) {
+                width: 80%;
             }
         }
-        &::before{
-            content: '☄';
-            color: white;
-            font-size: 50px;
-            transform: rotate(230deg);
+
+        .blob{
             position: absolute;
-            left: 13%;
-            opacity: 0.7;
-            @media screen and(max-width:700px) {
-                left: 0;
-                top: -6%;
+            width: 110%;
+            z-index: -1;
+            transform: rotate(180deg);
+            border: 1px solid rosybrown;
+            border-radius: 100%;
+            border-style: dashed;
+            padding: 0px;
+            animation: rotater 5s linear infinite;
+            @media screen and (max-width:700px) {
+                width: 100%;
             }
         }
     }

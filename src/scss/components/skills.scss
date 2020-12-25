@@ -4,11 +4,12 @@
     display:grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap:2em;
-    align-content: center;
-    @media screen and (max-width:700px){
-        grid-template-columns: 1fr;
-        grid-gap: 1em;
-        padding: 30px 0;
+    // align-content: center;
+    @media screen and (max-width:1024px){
+        display: flex;
+        flex-flow:column ;
+        overflow-y: scroll;
+        grid-gap: 0.5em;
     }
     .front{
         background:url('../../assets/laptop.jpg') no-repeat;
@@ -31,6 +32,9 @@
         color:white;
         z-index:0;
         border-radius:10px;
+        @media screen and (max-width:1024px) {
+            height: 1000;
+        }
         &:hover{ 
             transform: perspective(800px) rotateY(180deg);
         }
