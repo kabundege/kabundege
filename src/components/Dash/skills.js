@@ -2,7 +2,7 @@ import React from 'react';
 import eye from '../../assets/eye.svg';
 import '../../scss/components/skills.scss';
 
-export default () => {
+const Skills = () => {
     return(
         <div className="container skills">
             <div className="front">
@@ -61,3 +61,5 @@ export default () => {
         </div>
     )
 }
+
+export default Skills;

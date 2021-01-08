@@ -5,7 +5,7 @@ import blob from '../../assets/blob.svg';
 import '../../scss/components/home.scss';
 import '../../scss/components/about.scss';
 
-export default () => {
+const About = () => {
     const heading = ['A','b','o','u','t',' ','m','e','.'];
     const nextVariants = {
         hidden: { 
@@ -55,3 +55,5 @@ export default () => {
         </div>
     )
 }
+
+export default About;

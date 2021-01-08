@@ -3,7 +3,7 @@ import me from '../../assets/new.png';
 import blob from '../../assets/blob.svg';
 import '../../scss/components/home.scss';
 
-export default () => {
+const Home = () => {
     const heading = ['H','i',',','i','\'','m',' c','h','r','i','s','s',',','a ','S','o','f','t','w','a','r','e','  d','e','v','.'];
 
     return (
@@ -32,3 +32,5 @@ export default () => {
         </div>
     )
 }
+
+export default Home;
