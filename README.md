@@ -10,7 +10,7 @@
  - 📧 christophekwizera1@gmail.com
  - ☎ **+250784824295**
  - 🐦 [**Twitter**](https://twitter.com/KabundegeC)
- - 🔗 [**Portfolio**](https://kabundege.herokuapp.com/)
+ - 🔗 [**Portfolio**](https://5ff8c0b101dd0300cb594ef2--silly-lovelace-ab170f.netlify.app/)
   
 **Languages and Tools:**  
 
