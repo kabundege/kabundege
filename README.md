@@ -1,4 +1,4 @@
-### Hi there, I'm [Christopher!](https://github.com/kabundege) 👋
+### Hi there, I'm [Christopher!](https://kabundege.rw) 👋
 ![Christopher](https://github.com/kabundege/kabundege/blob/master/src/assets/edit.JPG?raw=true)
 <p align="center"> 
   <b>Tour count<b>
@@ -10,7 +10,7 @@
  - 📧 christophekwizera1@gmail.com
  - ☎ **+250784824295**
  - 🐦 [**Twitter**](https://twitter.com/KabundegeC)
- - 🔗 [**Portfolio**](https://5ff8c0b101dd0300cb594ef2--silly-lovelace-ab170f.netlify.app/)
+ - 🔗 [**Portfolio**](https://www.kabundege.rw)
   
 **Languages and Tools:**  
 
