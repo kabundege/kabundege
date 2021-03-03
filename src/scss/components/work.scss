@@ -5,6 +5,9 @@
     justify-content: space-around;
     align-items: center;
     overflow: hidden;
+    @media screen and (max-width:800px) {
+        flex-flow: column;
+    }
     img{
         flex: 0.3;
         width: 30%;
@@ -15,6 +18,10 @@
         cursor: pointer;
         position: relative;
         transition: all .5s;
+        
+        @media screen and (max-width:800px) {
+            width: 80%;
+        }
         &:hover{
             transform: translateY(-10px) scale(1.1);
         }

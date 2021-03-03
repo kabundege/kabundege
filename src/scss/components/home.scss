@@ -14,16 +14,19 @@
     @media screen and(max-width:700px) {
         flex-flow: column;
         justify-content: space-between;
-        width: 100%;
+        height: auto;
+        overflow: auto;
     }
+    
 
     .content{
         border-radius: 10px;
         color: $text;
         padding-left: 80px;
+        animation: animLeft 01s forwards ease-out;
         @media screen and(max-width:700px) {
-            padding-left: 0;
-            margin-left:10%;
+            padding-left: 4.5em;
+            padding-top: 3em;
         }
 
         div{
@@ -87,12 +90,18 @@
                 opacity: 0.5;
                 position: relative;
                 left:-5%;
+                @media screen and (max-width:700px) {
+                    left:-10%;
+                }
             }
             &::after{
                 content: '</h1>';
                 opacity: 0.5;
                 position: relative;
                 left:-5%;
+                @media screen and (max-width:700px) {
+                    left:-10%;
+                }
             }
         }
         &::before{
@@ -101,13 +110,19 @@
             opacity: 0.5;
             position: relative;
             left:-10%;
+            @media screen and (max-width:700px) {
+                left:-20%;
+            }
         }
         &::after{
             content: '</body>';
             font-family: painter;
             opacity: 0.5;
             position: relative;
-            left:-10%
+            left: -10%;
+            @media screen and (max-width:700px) {
+                left:-20%;
+            }
         }
     }
 
@@ -116,12 +131,20 @@
         justify-content: center;
         align-items: center;
         position: relative;
+        @media screen and (max-width:700px) {
+            position: initial;
+        }
         .avatar{
             width: 100%;
             border-radius: 100%;
             transform: rotate(20deg);
             @media screen and (max-width:700px) {
                 width: 80%;
+                position: absolute;
+                top: 15%;
+                opacity: 0.2;
+                z-index: -1;
+                filter: drop-shadow(0px 0px 50px #111);
             }
         }
 
@@ -137,6 +160,7 @@
             animation: rotater 5s linear infinite;
             @media screen and (max-width:700px) {
                 width: 100%;
+                display: none;
             }
         }
     }

@@ -8,6 +8,11 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    
+    @media screen and (max-width:800px) {
+        width: 40%;
+        left: 30%;
+    }
     a{
         width: 10%;
         height: 15%;

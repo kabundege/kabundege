@@ -7,7 +7,7 @@ const Parent = () => {
   return ( 
       <div className="loading">
           <section >
-              <h3>Chriss is Thinking...</h3>
+              <h3>CHRISS is Thinking...</h3>
               <Loader color="white"/>
           </section>
       </div>
