@@ -12,15 +12,15 @@
         grid-gap: 0.5em;
     }
     .front{
-        background:url('../../assets/laptop.jpg') no-repeat;
+        background:url('../../assets/images/laptop.jpg') no-repeat;
         background-size:cover;
     }
     .back{
-        background:url('../../assets/server.jpg') no-repeat;
+        background:url('../../assets/images/server.jpg') no-repeat;
         background-size:cover
     }
     .mobile{
-        background:url('../../assets/netflix.jpg') no-repeat;
+        background:url('../../assets/images/netflix.jpg') no-repeat;
         background-size:cover;
     }
     div{
@@ -56,7 +56,7 @@
             flex-flow:column-reverse;
             align-items: center;
             justify-content: center;
-            background:url('../../assets/button.svg') no-repeat;
+            background:url('../../assets/svg/button.svg') no-repeat;
             background-size:cover;
             background-position: right;
             border-radius:10px;

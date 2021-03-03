@@ -1,5 +1,5 @@
 import React,{ useRef,useState,useEffect } from 'react';
-import track from '../../assets/cute.mp3';
+import track from '../../assets/audio/cute.mp3';
 
 const Player = () => {
     const [ muted,setMuted ] = useState(false)

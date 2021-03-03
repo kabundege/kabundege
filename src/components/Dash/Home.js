@@ -1,6 +1,6 @@
 import React from 'react';
-import me from '../../assets/new.png';
-import blob from '../../assets/blob.svg';
+import me from '../../assets/images/new.png';
+import blob from '../../assets/svg/blob.svg';
 import '../../scss/components/home.scss';
 
 const Home = () => {

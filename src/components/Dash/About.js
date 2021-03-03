@@ -1,9 +1,9 @@
 import React from 'react';
-import me from '../../assets/new.png';
 import { motion } from 'framer-motion';
-import blob from '../../assets/blob.svg';
 import '../../scss/components/home.scss';
 import '../../scss/components/about.scss';
+import blob from '../../assets/svg/blob.svg';
+import me from '../../assets/images/new.png';
 
 const About = () => {
     const heading = ['A','b','o','u','t',' ','m','e','.'];

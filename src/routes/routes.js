@@ -4,6 +4,7 @@ import { BrowserRouter,Route,Switch } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import Particles from 'react-particles-js';
 import Home from '../components/Dash/Home';
+import Work from '../components/Dash/work';
 import About from '../components/Dash/About';
 import Skills from '../components/Dash/skills';
 import NavBar from '../components/layouts/NavBar';
@@ -48,7 +49,7 @@ class App extends Component {
           <Particles params={{
             		    "particles": {
                       "number": {
-                          "value": window.screen.width > 700 ? 50 : 10
+                          "value": window.screen.width > 700 ? 20 : 10
                       },
                       "size": {
                           "value": 2
@@ -60,6 +61,7 @@ class App extends Component {
             <Suspense fallback={<Loader/>}/>
             <Switch>
                <Route exact path='/' component={Home}/>
+               <Route path='/work' component={Work}/>
                <Route path='/about' component={About}/>
                <Route path='/skills' component={Skills}/>
                <Route path="/contact" component={ContactUs}/>

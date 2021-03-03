@@ -1,5 +1,5 @@
 import React from 'react';
-import eye from '../../assets/eye.svg';
+import eye from '../../assets/svg/eye.svg';
 import '../../scss/components/skills.scss';
 
 const Skills = () => {
