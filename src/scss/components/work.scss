@@ -4,6 +4,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    overflow: hidden;
     img{
         flex: 0.3;
         width: 30%;
@@ -17,5 +18,38 @@
         &:hover{
             transform: translateY(-10px) scale(1.1);
         }
+    }
+}
+
+@keyframes animUp{
+    from{
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to{
+        transform: none;
+        opacity: 1;
+    }
+}
+
+@keyframes animRight{
+    from{
+        transform: translateX(50px);
+        opacity: 0;
+    }
+    to{
+        transform: none;
+        opacity: 1;
+    }
+}
+
+@keyframes animLeft{
+    from{
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    to{
+        transform: none;
+        opacity: 1;
     }
 }

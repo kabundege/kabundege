@@ -5,6 +5,7 @@ import { AnimatePresence } from 'framer-motion';
 import Particles from 'react-particles-js';
 import Home from '../components/Dash/Home';
 import Work from '../components/Dash/work';
+import Nav from '../components/layouts/nav';
 import About from '../components/Dash/About';
 import Skills from '../components/Dash/skills';
 import NavBar from '../components/layouts/NavBar';
@@ -66,6 +67,7 @@ class App extends Component {
                <Route path='/skills' component={Skills}/>
                <Route path="/contact" component={ContactUs}/>
             </Switch>
+            <Nav/>
           </div>
         </BrowserRouter>
       </AnimatePresence>
