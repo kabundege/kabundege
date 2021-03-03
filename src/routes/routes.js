@@ -11,6 +11,7 @@ import Skills from '../components/Dash/skills';
 import NavBar from '../components/layouts/NavBar';
 import Loader from '../components/helpers/loading';
 import ContactUs from '../components/Dash/contanctus';
+import NotFound from '../components/helpers/notfound';
 
 
 class App extends Component {
@@ -66,6 +67,7 @@ class App extends Component {
                <Route path='/about' component={About}/>
                <Route path='/skills' component={Skills}/>
                <Route path="/contact" component={ContactUs}/>
+               <Route component={NotFound}/>
             </Switch>
             <Nav/>
           </div>
