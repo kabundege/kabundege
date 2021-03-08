@@ -2,8 +2,6 @@ import emailjs from 'emailjs-com';
 import React,{ Component } from 'react';
 import '../../scss/components/contact.scss';
 
-const { REACT_APP_PASSWORD,REACT_APP_EMAIL } = process.env
-
 export default class ContactUs extends Component {
 
     state={
