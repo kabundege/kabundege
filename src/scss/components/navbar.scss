@@ -118,7 +118,7 @@
             color: $textHover;
             font-size: x-large;
             cursor: pointer;
-            text-shadow: 0px 0px 3px #FF0066;
+            text-shadow: 0.5px .5px 0px #FF0066;
             outline: none;
         }
         @media screen and (max-width:700px) {

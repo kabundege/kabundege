@@ -26,7 +26,7 @@ const Home = () => {
                 </div>
             </div>
             <div className="styling">
-                <section className="anim">👋 Hi there!</section>
+                <section className="anim"> <span>👋</span> Hi there!</section>
                 <img src={blob} alt="blob" className="blob"/>
                 <img src={me} alt="me" className="avatar"/>
             </div>

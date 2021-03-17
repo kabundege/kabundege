@@ -1,5 +1,5 @@
 ### Hi there, I'm [Christopher!](https://kabundege.rw) 👋
-![Christopher](https://github.com/kabundege/kabundege/blob/master/src/assets/edit.JPG?raw=true)
+![Christopher](https://github.com/kabundege/kabundege/blob/master/src/assets/images/edit.JPG?raw=true)
 <p align="center"> 
   <b>Tour count<b>
   <br>

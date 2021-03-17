@@ -19,9 +19,36 @@ export default class ContactUs extends Component {
 
     handlerSubmit = async e => {
         e.preventDefault();
-        this.setState({ loading:true })
+        this.setState({ loading:true });
+        const { name,message,email,tel } = this.state;
+        
+        const form = document.createElement('form');
 
-        emailjs.sendForm('service_obimj0r', 'template_56e2slm', e.target, 'user_XFX124IMCIBDKjJ1A8F9l')
+        const namer = await document.createElement('input');
+        const mail = await document.createElement('input');
+        const phone = await document.createElement('input');
+        const msg = await document.createElement('textarea');
+
+        await mail.setAttribute("type","email");
+        await namer.setAttribute("type","text");
+        await phone.setAttribute("type","hidden");
+        
+        await msg.setAttribute("name","message");
+        await namer.setAttribute("name","user_name");
+        await mail.setAttribute("name","user_email");
+        await phone.setAttribute("name","contact_number")
+
+        await namer.setAttribute("value",name);
+        await mail.setAttribute("value", email);
+        msg.value = message;
+        phone.value = tel;
+
+        await form.appendChild(namer);
+        await form.appendChild(mail);
+        await form.appendChild(msg);
+        await form.appendChild(phone);
+
+        emailjs.sendForm('service_obimj0r', 'template_56e2slm', form, 'user_XFX124IMCIBDKjJ1A8F9l')
         .then((result) => {
             this.setState({
                 name:"",
@@ -30,7 +57,6 @@ export default class ContactUs extends Component {
                 message:"",
                 loading:false,
             });
-            console.log("==========================",result.text);
         }, (error) => {
             console.error(error);
             this.setState({ loading:false });
@@ -54,7 +80,7 @@ export default class ContactUs extends Component {
                     </div>
                     <div className="input-filed">
                         <label>email</label>
-                        <input type="text" id="email" name="contact_number" value={email} onChange={this.handlerChange} />
+                        <input type="email" id="email" name="user_email" value={email} onChange={this.handlerChange} />
                     </div>
                     <div className="input-filed">
                         <label>phone</label>
