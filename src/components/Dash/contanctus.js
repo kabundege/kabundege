@@ -1,6 +1,8 @@
+import React from 'react';
 import emailjs from 'emailjs-com';
-import React,{ Component } from 'react';
 import '../../scss/components/contact.scss';
+
+const { Component } = React;
 
 export default class ContactUs extends Component {
 

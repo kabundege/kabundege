@@ -51,7 +51,7 @@ class App extends Component {
           <Particles params={{
             		    "particles": {
                       "number": {
-                          "value": window.screen.width > 700 ? 20 : 10
+                          "value": window.screen.width > 700 ? 30 : 15
                       },
                       "size": {
                           "value": 2

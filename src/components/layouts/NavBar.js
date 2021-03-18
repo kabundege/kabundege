@@ -1,7 +1,9 @@
+import React from 'react';
 import Player from './player';
 import '../../scss/components/navbar.scss';
-import React,{ useState, useEffect} from 'react';
 import { Link,NavLink,useLocation } from 'react-router-dom';
+
+const { useState, useEffect } = React;
 
 export default function NavBar() {
     const [ Menu, setMenu ] = useState(true)

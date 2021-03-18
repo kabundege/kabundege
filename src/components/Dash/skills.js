@@ -4,7 +4,7 @@ import '../../scss/components/skills.scss';
 
 const Skills = () => {
     return(
-        <div className="container skills">
+        <div className="skills">
             <div className="front">
                 <section>
                     <h3>FrontEnd</h3>
