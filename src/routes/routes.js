@@ -1,7 +1,6 @@
 import 'dotenv/config';
 import React,{ Component,Suspense } from 'react';
 import { BrowserRouter,Route,Switch } from 'react-router-dom';
-import { AnimatePresence } from 'framer-motion';
 import Particles from 'react-particles-js';
 import Home from '../components/Dash/Home';
 import Work from '../components/Dash/work';
@@ -46,7 +45,6 @@ class App extends Component {
   }
   render(){
     return (
-      <AnimatePresence>
         <BrowserRouter>
           <Particles params={{
             		    "particles": {
@@ -60,19 +58,19 @@ class App extends Component {
             	}} className="particles"/>
           <div className="App">
             <NavBar/>
-            <Suspense fallback={<Loader/>}/>
-            <Switch>
-               <Route exact path='/' component={Home}/>
-               <Route path='/work' component={Work}/>
-               <Route path='/about' component={About}/>
-               <Route path='/skills' component={Skills}/>
-               <Route path="/contact" component={ContactUs}/>
-               <Route component={NotFound}/>
-            </Switch>
+            <div className="right">
+              <Switch>
+                <Route exact path='/' component={Home}/>
+                <Route path='/work' component={Work}/>
+                <Route path='/about' component={About}/>
+                <Route path='/skills' component={Skills}/>
+                <Route path="/contact" component={ContactUs}/>
+                <Route component={NotFound}/>
+              </Switch>
+            </div>
             <Nav/>
           </div>
         </BrowserRouter>
-      </AnimatePresence>
     )
   }
 }

@@ -1,7 +1,12 @@
 import Player from './player';
 import '../../scss/components/navbar.scss';
+import Avatar from '../../assets/images/avatar.png'
 import React,{ useState, useEffect} from 'react';
 import { Link,NavLink,useLocation } from 'react-router-dom';
+import { AiFillHome,AiOutlineUser,AiOutlineSend,AiOutlineHome } from "react-icons/ai";
+import { IoSpeedometerOutline,IoSpeedometerSharp,IoSendSharp } from "react-icons/io5";
+import { HiOutlineBriefcase,HiBriefcase } from "react-icons/hi";
+import { RiUser3Fill } from "react-icons/ri";
 
 export default function NavBar() {
     const [ Menu, setMenu ] = useState(true)
@@ -12,29 +17,33 @@ export default function NavBar() {
     return (
         <div className="navbar">
             <div className="logo">
-                <h3>C</h3>
-                <p>CHRISS</p>
+                <img src={Avatar} alt="" />
             </div>
             {Menu && <>
             <div className="links">
                 <NavLink exact to="/">
-                    <i className="fas fa-home"></i>
+                    <AiFillHome size={20} className="active_icon" />
+                    <AiOutlineHome size={20} className="icon" />
                     <p>Home</p>
                 </NavLink>
                 <NavLink to="/about">
-                    <i className="fas fa-user"></i>
+                    <AiOutlineUser size={20} className="icon" />
+                    <RiUser3Fill size={20} className="active_icon" />
                     <p>About</p>
                 </NavLink>
                 <NavLink to="/skills">
-                    <i className="fas fa-cog"></i>
+                    <IoSpeedometerOutline className="icon" size={20} />
+                    <IoSpeedometerSharp className="active_icon" size={20}/>
                     <p>skills</p>
                 </NavLink>
                 <NavLink to="/work">
-                <i className="far fa-eye" ></i>
+                    <HiOutlineBriefcase size={20} className="icon" />
+                    <HiBriefcase size={20} className="active_icon" />
                     <p>My Work</p>
                 </NavLink>
                 <NavLink to="/contact">
-                <i className="fas fa-envelope" ></i>
+                    <AiOutlineSend size={20} className="icon" />
+                    <IoSendSharp size={20} className="active_icon" />
                     <p>Contact</p>
                 </NavLink>
                 { width <= 700 && 

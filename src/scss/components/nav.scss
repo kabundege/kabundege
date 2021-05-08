@@ -1,8 +1,10 @@
+@import '../settings/settings';
+
 .nav{
     position: fixed;
     height: 5%;
-    width: 10%;
-    left: 45%;
+    width: 5%;
+    left: 52%;
     bottom: 1%;
     transform: translateY(-50%,-50%);
     display: flex;
@@ -15,7 +17,7 @@
     }
     a{
         width: 10%;
-        height: 15%;
+        height: 20%;
         border-radius: 1em;
         background: grey;
         transition: all .5s;
@@ -26,9 +28,9 @@
     }
     .active{
         width: 20%;
-        background: crimson;
+        background: $textHover;
         &:hover{
-            background: crimson;
+            background: $textHover;
         }
     }
 }

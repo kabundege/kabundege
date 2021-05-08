@@ -1,6 +1,8 @@
 import emailjs from 'emailjs-com';
 import React,{ Component } from 'react';
 import '../../scss/components/contact.scss';
+import { AiOutlineMessage,AiOutlineUser,AiOutlinePhone } from "react-icons/ai";
+import { HiOutlineMail } from "react-icons/hi";
 
 export default class ContactUs extends Component {
 
@@ -74,21 +76,21 @@ export default class ContactUs extends Component {
 
                 <form className="contact-form" onSubmit={this.handlerSubmit}>
                     <h4>Let's Talk</h4>
-                    <div className="input-filed">
-                        <label>name</label>
-                        <input type="text" id="name" name="user_name" value={name} onChange={this.handlerChange} />
+                    <div className="input-field">
+                        <AiOutlineUser className="icon" size={20}/>
+                        <input type="text" placeholder="Names" id="name" name="user_name" value={name} onChange={this.handlerChange} />
                     </div>
-                    <div className="input-filed">
-                        <label>email</label>
-                        <input type="email" id="email" name="user_email" value={email} onChange={this.handlerChange} />
+                    <div className="input-field">
+                        <HiOutlineMail size={20} className="icon" />
+                        <input type="email" placeholder="Email" id="email" name="user_email" value={email} onChange={this.handlerChange} />
                     </div>
-                    <div className="input-filed">
-                        <label>phone</label>
-                        <input type="tel"  id="tel" value={tel} onChange={this.handlerChange}/>
+                    <div className="input-field">
+                        <AiOutlinePhone size={20} className="icon"/>
+                        <input type="tel"  id="tel" placeholder="Telephone" value={tel} onChange={this.handlerChange}/>
                     </div>
-                    <div className="input-filed ">
-                        <label>message</label>
-                        <input type="text" name="user_email" id="message" value={message} onChange={this.handlerChange}/>
+                    <div className="input-field ">
+                        <AiOutlineMessage size={20} className="icon"/>
+                        <input type="text" name="user_email" placeholder="Message" id="message" value={message} onChange={this.handlerChange}/>
                     </div>
                     <footer>
                         <span><i className="fas fa-bullhorn"></i> reply in 24hrs</span>

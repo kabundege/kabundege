@@ -1,33 +1,13 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import '../../scss/components/home.scss';
 import '../../scss/components/about.scss';
-import blob from '../../assets/svg/blob.svg';
-import me from '../../assets/images/new.png';
+import me from '../../assets/images/avatar.png';
 
 const About = () => {
     const heading = ['A','b','o','u','t',' ','m','e','.'];
-    const nextVariants = {
-        hidden: { 
-          x: '-100vw' 
-        },
-        visible: {
-          x: 0,
-          transition: { type: 'spring', stiffness: 120 }
-        },
-        exit: {
-          x: "-100vh",
-          transition: { ease: 'easeInOut' }
-        }
-    }   
     return (
         <div className="parent about">
-            <motion.div
-                variants={nextVariants} 
-                initial="hidden"
-                animate="visible"
-                exit="exit" 
-                className="content">
+            <div className="content">
                 <div> 
                     <h1>
                         { heading.map(letter=><span>{letter}</span>)}
@@ -47,9 +27,8 @@ const About = () => {
                         Interested in the entire development spectrum and working on ambitious projects with positive people.
                     </p>
                 </section>
-            </motion.div>
+            </div>
             <div className="styling">
-                <img src={blob} alt="blob" className="blob"/>
                 <img src={me} alt="me" className="avatar"/>
             </div>
         </div>

@@ -1,6 +1,5 @@
 import React from 'react';
-import me from '../../assets/images/new.png';
-import blob from '../../assets/svg/blob.svg';
+import me from '../../assets/images/avatar.png';
 import '../../scss/components/home.scss';
 
 const Home = () => {
@@ -26,8 +25,9 @@ const Home = () => {
                 </div>
             </div>
             <div className="styling">
-                <section className="anim"> <span>👋</span> Hi there!</section>
-                <img src={blob} alt="blob" className="blob"/>
+                <section className="anim"> 
+                    <span>👋</span> Hi there!
+                </section>
                 <img src={me} alt="me" className="avatar"/>
             </div>
         </div>
