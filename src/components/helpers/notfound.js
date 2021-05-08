@@ -1,3 +1,4 @@
+import React from 'react';
 import '../../scss/components/notfound.scss';
 import Aliens from '../../assets/svg/aliens.svg';
 

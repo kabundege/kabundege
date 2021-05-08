@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import React from 'react';
 import '../../scss/components/work.scss';
 import royal from '../../assets/images/royal.PNG';
 import cinetie from '../../assets/images/cinetie.PNG';

@@ -1,7 +1,7 @@
 import Player from './player';
+import React,{useState, useEffect} from 'react';
 import '../../scss/components/navbar.scss';
-import Avatar from '../../assets/images/avatar.png'
-import React,{ useState, useEffect} from 'react';
+import Avatar from '../../assets/images/avatar.png';
 import { Link,NavLink,useLocation } from 'react-router-dom';
 import { AiFillHome,AiOutlineUser,AiOutlineSend,AiOutlineHome } from "react-icons/ai";
 import { IoSpeedometerOutline,IoSpeedometerSharp,IoSendSharp } from "react-icons/io5";

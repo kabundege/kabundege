@@ -1,8 +1,10 @@
+import React from 'react';
 import emailjs from 'emailjs-com';
-import React,{ Component } from 'react';
 import '../../scss/components/contact.scss';
 import { AiOutlineMessage,AiOutlineUser,AiOutlinePhone } from "react-icons/ai";
 import { HiOutlineMail } from "react-icons/hi";
+
+const { Component } = React;
 
 export default class ContactUs extends Component {
 
