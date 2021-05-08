@@ -1,5 +1,5 @@
 import 'dotenv/config';
-import React,{ Component,Suspense } from 'react';
+import React,{ Component } from 'react';
 import { BrowserRouter,Route,Switch } from 'react-router-dom';
 import Particles from 'react-particles-js';
 import Home from '../components/Dash/Home';
@@ -8,7 +8,6 @@ import Nav from '../components/layouts/nav';
 import About from '../components/Dash/About';
 import Skills from '../components/Dash/skills';
 import NavBar from '../components/layouts/NavBar';
-import Loader from '../components/helpers/loading';
 import ContactUs from '../components/Dash/contanctus';
 import NotFound from '../components/helpers/notfound';
 

@@ -28,7 +28,7 @@ export default class ContactUs extends Component {
         
         const { name,message,email,tel } = this.state;
 
-        if(email === "" || message === "" || email === "" || tel == ""){
+        if(email === "" || message === "" || email === "" || tel === ""){
             return null;
         }
 
