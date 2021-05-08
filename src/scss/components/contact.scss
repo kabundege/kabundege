@@ -12,48 +12,39 @@
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: center;
     align-items: center;
     position: relative;
     overflow: hidden;
-    .parent{
-        position: absolute;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: url('../../assets/images/map.png');
-        z-index: 0;
-    }
-    h3{
-        position: absolute;
-        top: 50%;
-        left: 20%;
-        transform: translate(-50%,-50%);
-        font-size: 80px;
-        font-family: 'Pacifico', cursive;
-        color: white;
-        opacity: 0.7;
-        i{
-            margin-top: -100%;
+    background: whitesmoke;
+    .image-container{
+        flex: .45;
+        display: flex;
+        align-items: center;
+        img{
+            width: 100%;
+            filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
         }
     }
-    form{
-        background: white;
-        box-shadow: 0px 0px 50px 0px #111;
-        position: absolute;
-        right: 10%;
+    .chev{
+        transition: all 1s;
+        transform: translateX(50%);
+    }
+    .contact-form{
+        border: 2px solid rgba(3, 130, 109, 0.9);
         padding:  0 3em;
-        width: 35%;
-        border-radius: 10px;
+        transform: translateX(50%);
+        max-width: 500px;
+        flex: .3;
+        border-radius: 2em;
         @media screen and (max-width:700px) {
             width: 75%;
             left: 10%;
             padding: 0 25px;
         }
         .input-field{
-            background:whitesmoke ;
+            background:#333;
             margin: 1em 0;
-            padding: .5em;
+            padding: 1em;
             border-radius: .5em;
             display: flex;
             align-items: center;
@@ -66,7 +57,7 @@
                 border: none;
                 flex-grow: 1;
                 padding-left: 1em;
-                color: #333;
+                color: white;
             }
         }
         label{
@@ -83,6 +74,7 @@
         h4{
             color: $textHover/1.3;
             font-family: 'EB Garamond', serif;
+            font-size: 3em;
         }
         
         footer{
@@ -101,7 +93,7 @@
                 margin-right: -20%;
                 border: none;
                 background: #222;
-                box-shadow: 0px 0px 10px 0px $textHover/3;
+                box-shadow: 5px 0px 10px 0px rgba(1, 143, 119, 0.529);
                 color: whitesmoke;
                 border-radius: 5px;
                 display: flex;

@@ -23,7 +23,14 @@
             width: 80%;
         }
         &:hover{
-            transform: translateY(-10px) scale(1.1);
+            transform: translateY(-10px) scale(1.5);
+            z-index: 2;
+        }
+        &:first-child:hover{
+            transform: translateX(20%) scale(1.5);
+        }
+        &:last-child:hover{
+            transform: translateX(-20%) scale(1.5);
         }
     }
 }

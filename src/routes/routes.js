@@ -53,7 +53,8 @@ class App extends Component {
                       },
                       "size": {
                           "value": 2
-                      }
+                      },
+                      "color":"crimson"
                   }
             	}} className="particles"/>
           <div className="App">

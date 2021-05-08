@@ -3,6 +3,8 @@ import emailjs from 'emailjs-com';
 import '../../scss/components/contact.scss';
 import { AiOutlineMessage,AiOutlineUser,AiOutlinePhone } from "react-icons/ai";
 import { HiOutlineMail } from "react-icons/hi";
+import Leave from '../../assets/images/leaves.png';
+import { BsArrowRight } from "react-icons/bs";
 
 const { Component } = React;
 
@@ -23,8 +25,14 @@ export default class ContactUs extends Component {
 
     handlerSubmit = async e => {
         e.preventDefault();
-        this.setState({ loading:true });
+        
         const { name,message,email,tel } = this.state;
+
+        if(email === "" || message === "" || email === "" || tel == ""){
+            return null;
+        }
+
+        this.setState({ loading:true });
         
         const form = document.createElement('form');
 
@@ -71,10 +79,11 @@ export default class ContactUs extends Component {
         const { name,email,tel,message,loading } = this.state;
         return(
             <div className="contact">
-                <div className="parent">
+                <div className="image-container">
+                    <img src={Leave} alt=""/>
                 </div>
 
-                <h3>Contact Us <i className="fas fa-map-marker-alt"></i></h3>
+                <BsArrowRight size={70} color={"#ccc"} className="chev" />
 
                 <form className="contact-form" onSubmit={this.handlerSubmit}>
                     <h4>Let's Talk</h4>
