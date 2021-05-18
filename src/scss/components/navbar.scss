@@ -53,7 +53,7 @@
         display: flex;
         flex-flow: column;
         text-align: center;
-        justify-content: space-around;
+        justify-content: space-between;
 
         @media screen and (max-width:700px){
             flex-flow: row;
@@ -75,6 +75,9 @@
             text-transform: uppercase;
             text-decoration: none;
             padding: 1em 0;
+            width: 100%;
+            max-height: 20%;
+            min-height: 20%;
             @media screen and (max-width:700px){
                 margin: 0;
             }
