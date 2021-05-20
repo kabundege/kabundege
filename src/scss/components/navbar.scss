@@ -1,7 +1,28 @@
 @import '../settings/settings';
-@keyframes presence{
+@keyframes presence {
    0% { left: 100vw }
   100% { left:0 }
+}
+
+@keyframes fromLeft {
+    0%{
+        left: -50%;
+        opacity: 0;
+    }
+    100%{
+        left: 0;
+        opacity: 1;
+    }
+}
+@keyframes toLeft {
+    0%{
+        left: 0%;
+        opacity: 1;
+    }
+    100%{
+        left: -50%;
+        opacity: 0;
+    }
 }
 
 .navbar{
@@ -22,10 +43,16 @@
     }
 
     @media screen and (max-width:700px){
-        flex-flow: row;
-        width: 100%;
-        height: fit-content;  
-        background: none;
+        position: absolute;
+        backdrop-filter: blur(20px);
+        height: 100%;
+        z-index: 5;
+        padding: 3em;
+        border-bottom-right-radius: 4em;
+        border-top-right-radius: 4em;
+        animation: fromLeft .5s ease-out;
+        box-shadow: 0px 0px 50px black;
+        -webkit-backdrop-filter: blur(20px);
     }
     
     a   {
@@ -54,19 +81,6 @@
         flex-flow: column;
         text-align: center;
         justify-content: space-between;
-
-        @media screen and (max-width:700px){
-            flex-flow: row;
-            background: $baseBackground/2;
-            position: fixed;
-            width: 100%;
-            height: 10%;
-            top:0%;
-            z-index: 1;
-            align-items: center;
-            animation: presence 1s ease;
-            i{ font-size: xx-large }
-        }
 
         p{
             font-family: 'Jura', sans-serif;
@@ -131,11 +145,6 @@
         display: flex;
         flex-flow: column;
         align-items: center;
-        @media screen and (max-width:700px){
-            flex-flow: row;
-            justify-content: space-around;
-            width: 100%;
-        }
         a{
             margin: 10px 0;
             i{ font-size: larger }
@@ -143,5 +152,23 @@
                 color: $textHover;
             }
         }
+    }
+}
+
+.opener{
+    position: fixed;
+    width: 100%;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 4;
+    color: whitesmoke;
+    background: linear-gradient(#2a2a2a 70%,transparent);
+    .avatar{
+        width: 35px;
+    }
+    .fa-times{
+        animation: spin .5s ease-in-out;
     }
 }

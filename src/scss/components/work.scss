@@ -7,6 +7,9 @@
     overflow: hidden;
     @media screen and (max-width:800px) {
         flex-flow: column;
+        overflow-y: scroll;
+        height: 100vh;
+        padding: 5em 0 2em 0;
     }
     img{
         flex: 0.3;

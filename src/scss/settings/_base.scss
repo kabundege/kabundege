@@ -53,5 +53,20 @@ button:disabled{
     background-color: rgba(0, 0, 0, 0.15);
     border: 1px solid #2a2a2a;
     overflow: hidden;
+    @media screen and (max-width:800px) {
+        overflow: auto;
+        flex-grow: 1;
+        border-radius: 0;
+        border: none;
+        width: 100%;
+        .parent{
+            align-items: center;
+            justify-content: center;
+            height: 90%;
+            .styling{
+                display: none;
+            }
+        }
+    }
 }
 

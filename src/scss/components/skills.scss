@@ -8,9 +8,12 @@
     height: 100%;
 
     @media screen and (max-width:1024px){
-        flex-flow:column ;
-        height: auto;
+        flex-flow:column;
+        overflow: scroll;
+        padding: 5em 0 2em 0;
+        height: 150vh;
     }
+
     .front{
         background:url('../../assets/images/laptop.jpg') no-repeat;
         background-size:cover;
@@ -37,8 +40,8 @@
         @media screen and (max-width:800px) {
             width: 80%;
             border-radius: .5em;
-            height: 300px;
             margin: 1em 0;
+            height: 150%;
         }
         &:hover{ 
             transform: perspective(800px) rotateY(180deg);

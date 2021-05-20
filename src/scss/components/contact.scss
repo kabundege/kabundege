@@ -16,6 +16,11 @@
     position: relative;
     overflow: hidden;
     background: whitesmoke;
+    @media screen and (max-width:800px) {
+        background: none;
+        margin: 0 auto;
+        flex-direction: column;
+    }
     .image-container{
         flex: .45;
         display: flex;
@@ -24,10 +29,16 @@
             width: 100%;
             filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
         }
+        @media screen and (max-width:800px) {
+            display: none;
+        }
     }
     .chev{
         transition: all 1s;
         transform: translateX(50%);
+        @media screen and (max-width:800px) {
+            display: none;
+        }
     }
     .contact-form{
         border: 2px solid rgba(3, 130, 109, 0.9);
@@ -37,9 +48,14 @@
         flex: .3;
         border-radius: 2em;
         @media screen and (max-width:700px) {
-            width: 75%;
-            left: 10%;
+            position: absolute;
+            width: 80%;
+            height: 70%;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
             padding: 0 25px;
+            background: whitesmoke;
         }
         .input-field{
             background:#333;
