@@ -1,0 +1,53 @@
+nav{
+    @include flexed();
+    width: 90%;
+    margin: 0 auto;
+    padding: 1em 0;
+    overflow: hidden;
+    h1 {
+        font-size: 3em;
+        background: transparent;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: #333;
+        text-transform: capitalize;
+        letter-spacing: 1px;
+    }
+    .icon{
+        position: relative;
+        z-index: 3;
+    }
+    section{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        right: 0;
+        top: 0;
+        overflow: hidden;
+        background: rgba(0, 0, 0, 0.2);
+        display: flex;
+        justify-content: flex-end;
+        z-index: 2;
+        transition: all .5s ease;
+        .menu{
+            list-style: none;
+            background: white;
+            flex: .5;
+            position: relative;
+            z-index: 10;
+            animation: fromRight .5s ease-out;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding-left: 10em;
+            li{
+                position: relative;
+                animation: fromRight .6s ease-in-out;
+                margin: 1em 0;
+            }
+        }
+    }
+}

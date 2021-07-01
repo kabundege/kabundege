@@ -1,78 +1,31 @@
-import 'dotenv/config';
-import React,{ Component } from 'react';
-import { BrowserRouter,Route,Switch } from 'react-router-dom';
-import Particles from 'react-particles-js';
-import Home from '../components/Dash/Home';
-import Work from '../components/Dash/work';
-import Nav from '../components/layouts/nav';
-import About from '../components/Dash/About';
-import Skills from '../components/Dash/skills';
-import NavBar from '../components/layouts/NavBar';
-import ContactUs from '../components/Dash/contanctus';
-import NotFound from '../components/helpers/notfound';
+import React,{ useEffect } from 'react'
+import Header from '../components/header'
+import Home from '../pages/home'
 
 
-class App extends Component {
-  componentDidUpdate(){
-    fetch("https://cloudflare.com/cdn-cgi/trace")
-    .then(res => res.text())
-    .then( response => {  
-      // console.log(response.split(""))
-      const ip = response.split("=")[3].split("ts")[0].trim();
-      const location = response.split("=")[9].split("")[0] + response.split("=")[9].split("")[1];
-      
-      //setting ip to localstorage
-      localStorage.setItem("ip",ip)
-  
-      //getting country with ip
-      fetch(`https://restcountries.eu/rest/v2/alpha/${location}`)
-      .then(res => res.json())
-      .then(data => { 
-        const{ name } = data;
-        localStorage.setItem("country",name)
-        fetch('http://localhost:5000/traffic',{
-          method:'POST',
-          headers:{
-            "contet-type":"application/json"
-          },
-          body: JSON.stringify({ip,country: name})
-        })
-      })
-      .catch(err=> console.log(err)) 
-    })
-    .catch(err => console.log(err))
-  }
-  render(){
-    return (
-        <BrowserRouter>
-          <Particles params={{
-            		    "particles": {
-                      "number": {
-                          "value": window.screen.width > 700 ? 30 : 15
-                      },
-                      "size": {
-                          "value": 2
-                      },
-                      "color":"crimson"
-                  }
-            	}} className="particles"/>
-          <div className="App">
-            <NavBar/>
-            <div className="right">
-              <Switch>
-                <Route exact path='/' component={Home}/>
-                <Route path='/work' component={Work}/>
-                <Route path='/about' component={About}/>
-                <Route path='/skills' component={Skills}/>
-                <Route path="/contact" component={ContactUs}/>
-                <Route component={NotFound}/>
-              </Switch>
-            </div>
-            <Nav/>
-          </div>
-        </BrowserRouter>
+
+const App = () => {
+
+    const mouseHanlder = () => {
+        const mouse = document.querySelector('.mouse')
+        document.onmousemove = (e) => {
+            mouse.style.top = e.pageY + 'px';
+            if( window.innerWidth - e.pageX > 20 )
+            mouse.style.left = e.pageX + 'px';
+        }
+    }
+
+    useEffect(()=>{
+        mouseHanlder()
+    },[])
+
+    return(
+        <div className="App bg-gray-50">
+            <Header/>
+            <div className="mouse"></div>
+            <Home/>
+        </div>
     )
-  }
 }
 
 export default App

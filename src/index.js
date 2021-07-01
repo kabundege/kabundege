@@ -1,9 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './scss/style.scss';
+import './scss/index.scss';
 import App from './routes/routes';
-import * as serviceWorker from './serviceWorkerRegistration';
+import { BrowserRouter as Router } from 'react-router-dom'
 
-ReactDOM.render(<App />, document.getElementById('root'));
-
-serviceWorker.register();
+ReactDOM.render(
+    <Router>
+        <App />
+    </Router>
+, document.getElementById('root'));
