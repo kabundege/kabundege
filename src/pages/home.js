@@ -1,7 +1,7 @@
 import React,{ useEffect,useState } from 'react'
 import chrissJpg from '../assets/images/chriss.jpg'
 import chrissPng from '../assets/images/chriss.png'
-import { FiFacebook,FiTwitter,FiLinkedin,FiDribbble } from 'react-icons/fi'
+import { FiFacebook,FiTwitter,FiLinkedin,FiDribbble,FiInstagram } from 'react-icons/fi'
 import { HiOutlineMail } from 'react-icons/hi'
 import { FaGithub,FaStackOverflow } from 'react-icons/fa'
 
@@ -42,12 +42,13 @@ const Home = () => {
     },[pallete])
 
     return (
-        <div id="home" style={{background: !pallete[0] ? "none" : `rgba(167, 167, 167,.5)` }} >
-            <div className="avatar">
+        <div className="home" >
+            <div className="avatar ">
                 <section className="flex items-end justify-center transform: -translate-x-10">
-                    <FiFacebook onClick={()=>window.open('https://www.linkedin.com/in/christophe-kwizera-081123190/')} size={20} className="social font-black" />
+                    <FiFacebook onClick={()=>window.open('https://web.facebook.com/christophe.kwizera.79')} size={20} className="social font-black" />
                     <FiTwitter onClick={()=>window.open('https://twitter.com/KabundegeC')} size={20} className="social mx-10 font-black" />
-                    <FiLinkedin onClick={()=>window.open('https://web.facebook.com/christophe.kwizera.79')} size={20} className="social mr-10 font-black" />
+                    <FiInstagram onClick={()=>window.open('https://www.instagram.com/kabundege_christophe/')} size={20} className="social" />
+                    <FiLinkedin onClick={()=>window.open('https://www.linkedin.com/in/christophe-kwizera-081123190/')} size={20} className="social mx-10 mr-7" />
                     <HiOutlineMail onClick={()=>window.open('mailto:christophekwizera1@gmail.com')} size={20} className="social font-black" />
                 </section>
                 <img src={chrissPng} alt="" />
@@ -55,8 +56,8 @@ const Home = () => {
             </div>
             <div className="socials flex justify-between flex-1">
                 <div className="content relative">
-                    <strong className="uppercase mb-5 mr-auto font-semibold"> [ who i am ] </strong>
-                    <h1 className="font-black text-4xl capitalize">
+                    <strong className="uppercase mb-2 text-gray-900 md:mb-5 mr-auto font-semibold"> [ who i am ] </strong>
+                    <h1 className="font-black text-2xl text-gray-900 md:text-4xl capitalize">
                         a human first, <br/>
                         full stack web <br/>
                         developer .
@@ -64,7 +65,7 @@ const Home = () => {
                 </div>
                 <div className="medias h-full flex flex-col justify-end">
                     <FiDribbble onClick={()=>window.open('https://dribbble.com/kabundege')}  size={30} className="icon hover:text-green-400" />
-                    <FaGithub onClick={()=>window.open('https://github.com/kabundege')} size={30} className="icon my-10"/>
+                    <FaGithub onClick={()=>window.open('https://github.com/kabundege')} size={30} className="icon my-5 md:my-10"/>
                     <FaStackOverflow onClick={()=>window.open('https://stackoverflow.com/users/13124495/christopher?tab=profile')} size={30} className="icon hover:text-blue-600"/>
                     <span className="my-10 border-r-2 border-gray-700"></span>
                 </div>

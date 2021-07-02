@@ -1,0 +1,81 @@
+.home{
+    @include flexed();
+    justify-content: flex-start;
+    align-items: initial;
+    height: 90%;
+    width: 90%;
+    margin-left: auto;
+    padding-right: 5%;
+    padding-left: 10%;
+    background: rgba(167, 167, 167,.5);
+    @media screen and (max-width:800px) {
+        flex-direction: column;
+        padding: 0;
+        width: 100%;
+        background: none;
+    }
+    .avatar{
+        position: relative;
+        z-index: 1;
+        flex: 1;
+        transition: all .5s ease;
+        display: flex;
+        flex-direction: column;
+        @media screen and (max-width:1600px) {
+            flex: .8;
+        }
+        img{
+            width: 100%;
+            position: relative;
+            z-index: 1;
+            flex: 1;
+            animation: opacifyIn .5s forwards;
+            filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.2));
+            @media screen and (max-width:800px) {
+                width: 80%;
+                margin: 0 auto;
+                background: rgba(167, 167, 167,.5);
+                margin-top: 1em;
+            }
+        }
+        section{
+            position: relative;
+            z-index: 1;
+        }
+        div{
+            position: absolute;
+            width: 120%;
+            height: 200%;
+            bottom: 15%;
+            left: 0%;
+            z-index: 0;
+            @media screen and (max-width:800px) {
+                width: 100%;
+            }
+        }
+    }
+    .socials{
+        @media screen and (max-width:800px) {
+            padding: 5%;
+            margin-bottom: 4em;
+        }
+        .content{
+            @include flexed();
+            flex-direction: column;
+            justify-content: center;
+            z-index: 1;
+        }
+        .medias{
+            position: relative;
+            z-index: 3;
+            span{
+                flex:.3;
+                transform:translateX(-50%);
+                @media screen and (max-width:800px) {
+                    transform: none;
+                    display: none;
+                }
+            }
+        }
+    }
+}

@@ -7,7 +7,7 @@ import { NavHashLink } from 'react-router-hash-link'
 const Header = () => {
     const [ showModal,setModal ] = useState(false)
 
-    const toggleMenu = () => {
+    const toggleMenu = (link) => {
         const menu = document.querySelector('.menu')
         if(!showModal){
             setModal(true)
@@ -19,6 +19,11 @@ const Header = () => {
                     return () => clearTimeout(id)
                 },300)
             }
+        }
+
+        if(true){
+            const mouse = document.querySelector('.mouse')
+            mouse.classList.remove('grow')
         }
 
     }
@@ -50,29 +55,29 @@ const Header = () => {
                 showModal &&
                 <section >
                     <ul className="menu">
-                        <li onClick={()=>toggleMenu()} className="font-bold icon text-2xl text-gray-700">
+                        <li onClick={()=>toggleMenu(true)} className="font-bold icon text-2xl text-gray-700">
                             <NavHashLink to="#home" >
                                 Home
                             </NavHashLink>
                         </li>
-                        <li onClick={()=>toggleMenu()} className="font-bold icon text-2xl text-gray-700">
+                        <li onClick={()=>toggleMenu(true)} className="font-bold icon text-2xl text-gray-700">
                             <NavHashLink to="#skills" >
                                 Skills
                             </NavHashLink>
                         </li>
-                        <li onClick={()=>toggleMenu()} className="font-bold icon text-2xl text-gray-700">
-                            <NavHashLink to="#skills" >
-                                Contacts
+                        <li onClick={()=>toggleMenu(true)} className="font-bold icon text-2xl text-gray-700">
+                            <NavHashLink to="#work" >
+                                Latest Work
                             </NavHashLink>
                         </li>
-                        <li onClick={()=>toggleMenu()} className="font-bold icon text-2xl text-gray-700">
-                            <NavHashLink to="#skills" >
+                        <li onClick={()=>toggleMenu(true)} className="font-bold icon text-2xl text-gray-700">
+                            <NavHashLink to="#about" >
                                 About
                             </NavHashLink>
                         </li>
-                        <li onClick={()=>toggleMenu()} className="font-bold icon text-2xl text-gray-700">
-                            <NavHashLink to="#skills" >
-                                Latest Work
+                        <li onClick={()=>toggleMenu(true)} className="font-bold icon text-2xl text-gray-700">
+                            <NavHashLink to="#contact" >
+                                Contacts
                             </NavHashLink>
                         </li>
                     </ul>
