@@ -1,6 +1,39 @@
 #contact{
     form{
         flex: .6;
+        
+        @media screen and (max-width:800px) {
+            flex: 1;
+        }
+        .trans{
+            background: rgba(189, 189, 189, 1);
+        }
+        .overlay{
+            width: 60%;
+            
+            @media screen and (max-width:800px) {
+                width: 80%;
+            }
+        }
+        section{
+            width: 60%;
+            
+            @media screen and (max-width:800px) {
+                width: 90%;
+                margin: 0 auto;
+            }
+        }
+        input,textarea{
+            color: black;
+            &::-webkit-input-placeholder{
+                color: rgba(17, 24, 39,1);
+            }
+        }
+    }
+    .sideImg{
+        @media screen and (max-width:800px) {
+            display: none;
+        }
     }
     .sideImg{
         flex: .4;
