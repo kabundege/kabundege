@@ -20,36 +20,36 @@ const Contacts = () =>{
         e.preventDefault()
 
         if(names === "" || message === "" || email === "" || tel === ""){
-            return null;
+            return alert("Missing Somthing !! ")
         }
 
         setLoader(true)
         
         const form = document.createElement('form');
 
-        const namer = await document.createElement('input');
-        const mail = await document.createElement('input');
-        const phone = await document.createElement('input');
-        const msg = await document.createElement('textarea');
+        const namer = document.createElement('input');
+        const mail = document.createElement('input');
+        const phone = document.createElement('input');
+        const msg = document.createElement('textarea');
 
-        await mail.setAttribute("type","email");
-        await namer.setAttribute("type","text");
-        await phone.setAttribute("type","hidden");
+        mail.setAttribute("type","email");
+        namer.setAttribute("type","text");
+        phone.setAttribute("type","hidden");
         
-        await msg.setAttribute("name","message");
-        await namer.setAttribute("name","user_name");
-        await mail.setAttribute("name","user_email");
-        await phone.setAttribute("name","contact_number")
+        msg.setAttribute("name","message");
+        namer.setAttribute("name","user_name");
+        mail.setAttribute("name","user_email");
+        phone.setAttribute("name","contact_number")
 
-        await namer.setAttribute("value",names);
-        await mail.setAttribute("value", email);
+        namer.setAttribute("value",names);
+        mail.setAttribute("value", email);
         msg.value = message;
         phone.value = tel;
 
-        await form.appendChild(namer);
-        await form.appendChild(mail);
-        await form.appendChild(msg);
-        await form.appendChild(phone);
+        form.appendChild(namer);
+        form.appendChild(mail);
+        form.appendChild(msg);
+        form.appendChild(phone);
 
         emailjs.sendForm('service_obimj0r', 'template_56e2slm', form, 'user_XFX124IMCIBDKjJ1A8F9l')
         .then(() => {
@@ -67,9 +67,9 @@ const Contacts = () =>{
         <div id="contact" className="flex relative flex-col">
             <div className="flex justify-between flex-1 relative z-10">
                 <form className="pl-2 md:pl-20 relative" onSubmit={(e)=>handlerSubmit(e)} >
-                    <h1 className="font-black text-5xl" style={{color:"rgba(189, 189, 189, 1)"}}>Say</h1>
+                    <h1 className="font-black text-5xl text-gray-400">Say</h1>
                     <h2 className="font-black ml-3 -mt-2 text-5xl text-gray-900">Hello</h2>
-                    <div style={{height:"60%"}} className="absolute overlay border-b-2 border-l-2 bg-gray-900 border-green-100 bottom-0"></div>
+                    <div style={{height:"60%"}} className="absolute overlay border-b-2 border-l-2 bg-gray-400 border-green-100 bottom-0"></div>
                     <section className="md:mt-10 mt-24 py-6 md:pt-0 pl-0 md:pl-10 relative z-10">
                         <div className="flex justify-between item-center py-3 md:p-3 px-4 md:px-5 mb-3 md:mb-5 trans rounded-sm shadow-xl">
                             <FaUserAlt size={20} className="text-green-600" />
@@ -121,7 +121,7 @@ const Contacts = () =>{
                             {
                                 loading ? 
                                     <MoonLoader size={30} color={"white"} />:
-                                    <button style={{cursor:"none"}} className="bg-gray-100 px-2 md:px-5 py-3  border-r-2 icon flex justify-between items-center border-green-900 rounded-sm transform md:translate-x-20 shadow-xl">
+                                    <button style={{cursor:"none"}} className="bg-gray-100 px-2 md:px-5 py-3 cursor-pointer  border-r-2 icon flex justify-between items-center border-green-900 rounded-sm transform md:translate-x-20 shadow-xl">
                                         <span className="font-bold text-base md:text-xl text-gray-600">
                                             Send Message
                                         </span>

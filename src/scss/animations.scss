@@ -20,6 +20,17 @@
     }
 }
 
+@keyframes animLeft{
+    from{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
 @keyframes opacifyIn {
     from{
         opacity: 0;
@@ -29,4 +40,24 @@
     }
 }
 
+@keyframes animUp{
+    from{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
 
+@keyframes animDown{
+    from{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

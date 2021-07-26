@@ -1,12 +1,28 @@
-import React from 'react'
+import React,{ useEffect } from 'react'
 import { BiDevices } from 'react-icons/bi'
 import { FaCode, FaFigma } from 'react-icons/fa'
 import { GiVintageRobot } from 'react-icons/gi'
 import { BsArrowRight } from 'react-icons/bs'
 import { SiJavascript,SiPython } from 'react-icons/si'
-import { IoLogoJavascript } from 'react-icons/io'
 
 const About = () =>{
+    useEffect(() => {
+        const tags = document.querySelectorAll('.card')
+        const observer =  new IntersectionObserver(entries=>{
+            for(const entry of entries){
+                if(entry.intersectionRatio){
+                    entry.target.style.animation =  "animDown 1s forwards ease-out"
+                }else{
+                    entry.target.style.animation = ""
+                }
+            }
+        })
+        
+        for(const tag of tags){
+            observer.observe(tag)
+        }
+    }, [])
+    
     const data = [
         {
             title:"Product Design",
@@ -51,7 +67,7 @@ const About = () =>{
                         {
                             React.Children.toArray(
                                 data.map( one => 
-                                    <div className={`${one.current ? "bg-green-500" : "bg-gray-300"} relative shadow-md mx-5 w-60 h-60 p-5 flex flex-col justify-end items-start1`}>
+                                    <div className={`${one.current ? "bg-green-500" : "bg-gray-300"} card relative shadow-md mx-5 w-60 h-60 p-5 flex flex-col justify-end items-start1`}>
                                         { one.icon( one.current ? 'white' : 'rgba(4, 120, 87,1)' ) }
                                         { one.tool( one.current ? '#333' : 'rgba(4, 120, 87,1)' ) }
                                         <h1 className="font-bold mt-5 text-xl">{one.title}</h1>
