@@ -43,7 +43,7 @@ const Home = () => {
 
     return (
         <div className="home" >
-            <div className="avatar ">
+            <div className="avatar">
                 <section className="flex items-end justify-center transform: -translate-x-10">
                     <FiFacebook onClick={()=>window.open('https://web.facebook.com/christophe.kwizera.79')} size={20} className="social font-black" />
                     <FiTwitter onClick={()=>window.open('https://twitter.com/KabundegeC')} size={20} className="social mx-10 font-black" />

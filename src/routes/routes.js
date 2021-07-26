@@ -1,7 +1,7 @@
 import React,{ useEffect } from 'react'
 import Header from '../components/header'
-// import About from '../pages/about'
 import Contacts from '../pages/contact'
+import About from '../pages/about'
 import Home from '../pages/home'
 
 
@@ -28,7 +28,7 @@ const App = () => {
                 <Header/>
                 <Home/>
             </div>
-            {/* <About /> */}
+            <About />
             <Contacts/>
         </div>
     )

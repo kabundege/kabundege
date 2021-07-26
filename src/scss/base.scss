@@ -53,6 +53,19 @@ html,body{
     mix-blend-mode: difference;
 }
 
+.transparent-text {
+    font-size: 3em;
+    background: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #333;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    position: relative;
+    z-index: 2;
+}
+
 #skills,#work,#about,#contact,#home{
     height: 100vh;
     max-height: 1000px;
