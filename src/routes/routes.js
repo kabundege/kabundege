@@ -22,7 +22,7 @@ const App = () => {
     },[])
 
     return(
-        <div className="App">
+        <div className="App bg-gray-50">
             <div className="mouse"></div>
             <div id="home">
                 <Header/>

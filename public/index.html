@@ -23,10 +23,68 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.umd.js"></script>
   <title> Software Engineer </title>
 </head>
+<style>
+  .ball-wrapper{
+    position: absolute;
+    width: 50%;
+    height: 60%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+	  filter: blur(10px) contrast(50);
+    z-index: -1;
+  }
+  .ball{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+  .ball-1{
+    background: pink;
+    animation: ocs-left 1.5s infinite ease;
+  }
+  .ball-2{
+    animation: ocs-right 1.5s infinite ease;
+    background:#0ff;
+  }
+
+  @keyframes ocs-left {
+    0%{
+      left: 20%;
+    }
+    50%{
+      left: 50%;
+    }
+    100%{
+      left: 20%;
+    }
+  }
+
+  @keyframes ocs-right {
+    0%{
+      left: 80%;
+    }
+    50%{
+      left: 50%;
+    }
+    100%{
+      left: 80%;
+    }
+  }
+
+</style>
 
 <body>
   <noscript>You need to enable JavaScript to run this app.</noscript>
   <div id="root"></div>
+  <div class="ball-wrapper">
+    <div class="ball ball-1"></div>
+    <div class="ball ball-2"></div>
+  </div>
   <script>
     (function (i, s, o, g, r, a, m) {
       i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {

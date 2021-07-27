@@ -115,8 +115,8 @@ const Contacts = () =>{
                         </div>
                         <div className="flex justify-between items-center mt-20">
                             <div className="flex justify-between items-center">
-                                <FaBullhorn size={20} className="text-green-600" />
-                                <p className="text-gray-500 font-medium ml-2">Reply in 24hrs</p>
+                                <FaBullhorn size={20} className="text-green-700" />
+                                <p className="text-gray-50 capitalize font-semibold font-serif ml-2">Reply in 24hrs</p>
                             </div>
                             {
                                 loading ? 

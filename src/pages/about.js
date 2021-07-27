@@ -26,19 +26,19 @@ const About = () =>{
     const data = [
         {
             title:"Product Design",
-            tool: (color) => <FaFigma size={20} color={color} className="absolute top-5 right-5" />,
+            tool: (color) => <FaFigma size={20} color={color} className="absolute icon hover:text-pink-500 top-5 right-5" />,
             icon: (color) => <BiDevices color={color} size={25} className="icon" />,
             current:true
         },
         {
             title:<>Front End <br/> Developer</>,
-            tool:(color) => <SiJavascript color={color} size={20} className="absolute top-5 right-5" />,
+            tool:(color) => <SiJavascript  size={20} className="absolute text-green-800 icon hover:text-blue-800 top-5 right-5" />,
             icon: (color) => <FaCode color={color} size={25} className="icon" />,
             current:false
         },
         {
             title:<>Machine <br/> learning</>,
-            tool:(colors)=> <SiPython color={colors} size={20} className="absolute top-5 right-5" />,
+            tool:(colors)=> <SiPython size={20} className="absolute icon text-green-800 hover:text-yellow-400 top-5 right-5" />,
             icon: (color) => <GiVintageRobot color={color} size={25} className="icon" />,
             current:false
         },
