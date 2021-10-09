@@ -19,8 +19,8 @@ const Contacts = () =>{
     const handlerSubmit = async e => {
         e.preventDefault()
 
-        if(names === "" || message === "" || email === "" || tel === ""){
-            return alert("Missing Somthing !! ")
+        if(!names || !message || !email || !tel){
+            return alert("Missing Somthing, check and Try again ")
         }
 
         setLoader(true)
@@ -71,7 +71,7 @@ const Contacts = () =>{
                     <h2 className="font-black ml-3 -mt-2 text-5xl text-gray-900">Hello</h2>
                     <div style={{height:"60%"}} className="absolute overlay border-b-2 border-l-2 bg-gray-400 border-green-100 bottom-0"></div>
                     <section className="md:mt-10 mt-24 py-6 md:pt-0 pl-0 md:pl-10 relative z-10">
-                        <div className="flex justify-between item-center py-3 md:p-3 px-4 md:px-5 mb-3 md:mb-5 trans rounded-sm shadow-xl">
+                        <div className="flex justify-between item-center py-3 md:p-3 px-4 md:px-5 mb-3 md:mb-5 trans rounded-sm border-2 border-gray-100">
                             <FaUserAlt size={20} className="text-green-600" />
                             <input 
                                 className="flex-1 text-gray-900 text-lg bg-transparent font-semibold pl-3 outline-none"
@@ -81,7 +81,7 @@ const Contacts = () =>{
                                 placeholder="Names"
                             />
                         </div>
-                        <div className="flex justify-between trans item-center md:p-3 py-4 md:px-5 px-2 mb-3 md:mb-5 rounded-sm shadow-xl">
+                        <div className="flex justify-between trans item-center md:p-3 py-4 md:px-5 px-2 mb-3 md:mb-5 rounded-sm border-2 border-gray-100">
                             <HiMail size={25} className="text-green-600 ml-1" />
                             <input 
                                 className="flex-1 bg-transparent text-gray-900 text-lg font-semibold pl-2 outline-none"
@@ -91,7 +91,7 @@ const Contacts = () =>{
                                 placeholder="Email"
                             />
                         </div>
-                        <div className="flex transform trans justify-between item-center py-4 md:py-3 px-3 md:px-5 mb-3 md:mb-5 rounded-sm shadow-xl">
+                        <div className="flex transform trans justify-between item-center py-4 md:py-3 px-3 md:px-5 mb-3 md:mb-5 rounded-sm border-2 border-gray-100">
                             <FaPhoneAlt size={18} className="text-green-600" />
                             <input 
                                 className="flex-1 bg-transparent pl-3 text-gray-900 font-semibold text-lg outline-none"
@@ -102,7 +102,7 @@ const Contacts = () =>{
                                 placeholder="Phone Number"
                             />
                         </div>
-                        <div className="flex transform trans justify-between item-center py-4 md:py-3 px-3 md:px-5 mb-3 md:mb-5 rounded-sm shadow-xl">
+                        <div className="flex transform trans justify-between item-center py-4 md:py-3 px-3 md:px-5 mb-3 md:mb-5 rounded-sm border-2 border-gray-100">
                             <AiFillMessage size={20} className="text-green-600" />
                             <textarea 
                                 className="flex-1 bg-transparent pl-3 text-gray-900 font-semibold text-lg outline-none"
@@ -121,7 +121,7 @@ const Contacts = () =>{
                             {
                                 loading ? 
                                     <MoonLoader size={30} color={"white"} />:
-                                    <button style={{cursor:"none"}} className="bg-gray-100 px-2 md:px-5 py-3 cursor-pointer  border-r-2 icon flex justify-between items-center border-green-900 rounded-sm transform md:translate-x-20 shadow-xl">
+                                    <button style={{cursor:"none"}} className="bg-gray-100 px-2 md:px-5 py-3 cursor-pointer  border-r-2 icon flex justify-between items-center border-gray-400 rounded-sm transform md:translate-x-20 ">
                                         <span className="font-bold text-base md:text-xl text-gray-600">
                                             Send Message
                                         </span>

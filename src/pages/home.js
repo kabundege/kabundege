@@ -8,7 +8,8 @@ import { FaGithub,FaStackOverflow } from 'react-icons/fa'
 const { ColorThief } = window;
 
 const Home = () => {
-    const [ pallete, setPallete ] = useState([])
+    const [ pallete, setPallete ] = useState([]);
+    const [ imgUrl,setUrl ] = useState("")
 
     const  loadImage = () => {
         const colorThief = new ColorThief();
@@ -16,6 +17,7 @@ const Home = () => {
         img.src = chrissJpg;
 
         img.onload = e => {
+            setUrl(chrissPng)
             setPallete(colorThief.getPalette(img))
         }
 
@@ -51,7 +53,7 @@ const Home = () => {
                     <FiLinkedin onClick={()=>window.open('https://www.linkedin.com/in/christophe-kwizera-081123190/')} size={20} className="social mx-10 mr-7" />
                     <HiOutlineMail onClick={()=>window.open('mailto:christophekwizera1@gmail.com')} size={20} className="social font-black" />
                 </section>
-                <img src={chrissPng} alt="" />
+                { imgUrl && <img src={imgUrl} alt="" />}
                 <div className="bg-green-500 pl-10"></div>
             </div>
             <div className="socials flex justify-between flex-1">
