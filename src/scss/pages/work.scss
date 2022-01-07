@@ -1,0 +1,13 @@
+#work{
+    @media screen and (max-width:8000px) {
+        display: none;
+    }
+}
+
+.dot{
+    animation: scroller 2s ease-out infinite;
+}
+
+.work_home{
+    filter: saturate(0);
+}

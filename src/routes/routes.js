@@ -3,6 +3,7 @@ import Header from '../components/header'
 import Contacts from '../pages/contact'
 import About from '../pages/about'
 import Home from '../pages/home'
+import Work from '../pages/work'
 
 
 
@@ -29,6 +30,7 @@ const App = () => {
                 <Home/>
             </div>
             <About />
+            <Work/>
             <Contacts/>
         </div>
     )

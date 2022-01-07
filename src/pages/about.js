@@ -31,7 +31,7 @@ const About = () =>{
             current:true
         },
         {
-            title:<>Front End { window.innerWidth > 800 && <br/>} Developer</>,
+            title:<>Full-Stack { window.innerWidth > 800 && <br/>} Developer</>,
             tool:(color) => <SiJavascript  size={20} className="absolute text-green-800 icon hover:text-blue-800 top-5 right-5" />,
             icon: (color) => <FaCode color={color} size={25} className="icon" />,
             current:false
