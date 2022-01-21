@@ -54,7 +54,7 @@ const Header = () => {
             {
                 showModal &&
                 <section >
-                    <ul className="menu">
+                    <ul >
                         <li onClick={()=>toggleMenu(true)} className="font-bold icon text-2xl text-gray-700">
                             <NavHashLink to="#home" >
                                 Home

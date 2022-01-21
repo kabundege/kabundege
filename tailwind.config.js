@@ -5,6 +5,12 @@ module.exports = {
     extend: {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--gradient-color-stops))',
+      },
+      margin:{
+        "1/4":"50%"
+      },
+      height:{
+        '100vh':'100vh'
       }
     }
   },

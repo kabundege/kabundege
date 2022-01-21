@@ -45,7 +45,7 @@ const About = () =>{
     ]
     
     return(
-        <div id="about">
+        <div id="about" className="relative z-10">
             <div className="mt-5 flex justify-end items-end relative">
                 <h1 className="font-extrabold text-left capitalize text-xl md:text-4xl transform translate-x-32 md:translate-x-0 translate-y-40 -rotate-90 transparent-text">
                     what i Offer
@@ -59,9 +59,9 @@ const About = () =>{
                     </h5>
                 </section>
                 <section className="flex flex-col justify-evenly h-full">
-                    <h3 className="font-bold text-gray-700 pl-5 px-10 md:px-0 text-lg md:text-3xl text-left">
-                        Products Design and Developer, specialized { window.innerWidth > 800 && <br/>}
-                        In UI/UX and Machine Learning .
+                    <h3 className="font-bold text-gray-600 pl-5 px-10 md:px-0 text-lg md:text-3xl text-left">
+                        Products Design, Development  and { window.innerWidth > 800 && <br/>} Maintainance, Specialized 
+                        In UI/UX { window.innerWidth > 800 && <br/>}  And Machine Learning .
                     </h3>
                     <div className="flex px-5 md:px-0 flex-col md:flex-row">
                         {

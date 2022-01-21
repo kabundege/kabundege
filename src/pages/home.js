@@ -44,7 +44,7 @@ const Home = () => {
     },[pallete])
 
     return (
-        <div className="home" >
+        <div className="home relative z-10" >
             <div className="avatar">
                 <section className="flex items-end justify-center transform: -translate-x-10">
                     <FiFacebook onClick={()=>window.open('https://web.facebook.com/christophe.kwizera.79')} size={20} className="social font-black" />
