@@ -53,7 +53,10 @@ const Home = () => {
                     <FiLinkedin onClick={()=>window.open('https://www.linkedin.com/in/christophe-kwizera-081123190/')} size={20} className="social mx-10 mr-7" />
                     <HiOutlineMail onClick={()=>window.open('mailto:christophekwizera1@gmail.com')} size={20} className="social font-black" />
                 </section>
-                { imgUrl && <img src={imgUrl} alt="" />}
+                { 
+                    imgUrl && 
+                    <img src={imgUrl} alt="" />
+                }
                 <div className="bg-green-500 pl-10"></div>
             </div>
             <div className="socials flex justify-between flex-1">
