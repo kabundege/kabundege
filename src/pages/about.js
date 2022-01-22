@@ -52,7 +52,7 @@ const About = () =>{
                 </h1>
             </div>
             <div className="flex md:px-10 flex-col md:flex-row items-start md:items-center justify-evenly md:justify-between h-full">    
-                <section className=" flex flex-col justify-center px-5 md:px-10 items-center transform md:-translate-y-20">
+                <section className="relative flex flex-col justify-center px-5 md:px-10 items-center transform md:-translate-y-20">
                     <h1 className="font-black text-7xl md:text-9xl text-green-700 tracking-tighter mb-5 md:mb-10">5+</h1>
                     <h5 className="font-bold text-xl md:text-3xl text-gray-700 capitalize">
                         years <br/> experience <br/> working

@@ -5,7 +5,7 @@ import work_two from '../assets/images/work-two.PNG'
 import work_three from '../assets/images/work-three.PNG'
 import work_four from '../assets/images/work-four.PNG'
 import work_five from '../assets/images/work-five.png'
-import work_six from '../assets/images/work-six.png'
+import work_six from '../assets/images/work-six.PNG'
 import work_seven from '../assets/images/work-seven.PNG'
 
 const Work = () => {
@@ -70,8 +70,9 @@ const Work = () => {
                                 <h3 className="text-xl font-medium text-gray-600">{one.title}</h3>
                                 <h1 className="text-7xl font-black text-green-600">{index + 1}</h1>
                             </div>
-                            <div className="bg-green-600 h-52 w-full relative">
-                                <img src={one.image} className="absolute object-cover object-left-top w-full h-full"  alt=""/>
+                            <div className="h-52 w-full relative overflow-hidden">
+                                <div className="absolute w-1/4 h-full bg-green-600 left-0" />
+                                <img src={one.image} className="w-full  object-contain relative"  alt=""/>
                             </div>
                         </div>
                         )
