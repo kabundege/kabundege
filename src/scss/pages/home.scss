@@ -8,6 +8,7 @@
     padding-right: 5%;
     padding-left: 10%;
     background: linear-gradient(to right, transparent,rgba(189, 189, 189, 0.5));
+    position: relative;
     @media screen and (max-width:800px) {
         flex-direction: column;
         padding: 0;
@@ -56,6 +57,8 @@
         }
     }
     .socials{
+        position: inherit;
+        z-index: 50;
         @media screen and (max-width:800px) {
             padding: 5%;
             margin-bottom: 4em;
@@ -64,11 +67,11 @@
             @include flexed();
             flex-direction: column;
             justify-content: center;
-            z-index: 1;
+            z-index: 50;
         }
         .medias{
             position: relative;
-            z-index: 3;
+            z-index: 31;
             span{
                 flex:.3;
                 transform:translateX(-50%);

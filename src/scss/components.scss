@@ -18,11 +18,11 @@ nav{
         text-transform: capitalize;
         letter-spacing: 1px;
         position: relative;
-        z-index: 2;
+        z-index: 21;
     }
     .icon{
         position: relative;
-        z-index: 3;
+        z-index: 21;
     }
     section{
         position: absolute;
@@ -35,7 +35,7 @@ nav{
         background: rgba(0, 0, 0, 0.2);
         display: flex;
         justify-content: flex-end;
-        z-index: 2;
+        z-index: 20;
         transition: all .5s ease;
         .menu{
             list-style: none;
