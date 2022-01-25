@@ -1,5 +1,4 @@
 import React,{ useEffect,useState } from 'react'
-import { Link } from 'react-router-dom'
 import chrissJpg from '../assets/images/chriss.jpg'
 import chrissPng from '../assets/images/chriss.png'
 import { BsFillCloudDownloadFill } from 'react-icons/bs'
@@ -39,6 +38,30 @@ const Home = () => {
         }
     }
 
+    const download = () => {
+        fetch(resume)
+        .then(res =>res.blob())
+        .then(buffer => {
+            const blob = new Blob([buffer])
+            const url = window.URL.createObjectURL(blob);
+              const link = document.createElement('a');
+              link.href = url;
+              link.setAttribute(
+                'download',
+                `Resume.pdf`,
+              );
+          
+              // Append to html link element page
+              document.body.appendChild(link);
+          
+              // Start download
+              link.click();
+          
+              // Clean up and remove the link
+              link.parentNode.removeChild(link);
+        })
+    }
+
     useEffect(()=>{
         if(!pallete[0]){
             loadImage()
@@ -70,10 +93,10 @@ const Home = () => {
                         full stack web <br/>
                         developer .
                     </h1>
-                    <Link className="flex social mt-10 text-gray-900 items-center" href={resume} download>
+                    <section className="flex social mt-10 text-gray-900 items-center" onClick={download}>
                         <BsFillCloudDownloadFill size={25} className="socail-grow font-black" />
                         <span className="ml-2 font-bold">Resume</span>
-                    </Link>
+                    </section>
                 </div>
                 <div className="medias h-full flex flex-col justify-end">
                     <FiDribbble onClick={()=>window.open('https://dribbble.com/kabundege')}  size={30} className="icon hover:text-green-400" />
