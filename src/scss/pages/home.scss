@@ -67,6 +67,7 @@
             @include flexed();
             flex-direction: column;
             justify-content: center;
+            align-items: flex-start;
             z-index: 50;
         }
         .medias{

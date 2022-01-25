@@ -1,9 +1,12 @@
 import React,{ useEffect,useState } from 'react'
+import { Link } from 'react-router-dom'
 import chrissJpg from '../assets/images/chriss.jpg'
 import chrissPng from '../assets/images/chriss.png'
+import { BsFillCloudDownloadFill } from 'react-icons/bs'
 import { FiFacebook,FiTwitter,FiLinkedin,FiDribbble,FiInstagram } from 'react-icons/fi'
 import { HiOutlineMail } from 'react-icons/hi'
 import { FaGithub,FaStackOverflow } from 'react-icons/fa'
+import resume from '../assets/RecentResume.pdf' 
 
 const { ColorThief } = window;
 
@@ -67,6 +70,10 @@ const Home = () => {
                         full stack web <br/>
                         developer .
                     </h1>
+                    <Link className="flex social mt-10 text-gray-900 items-center" href={resume} download>
+                        <BsFillCloudDownloadFill size={25} className="socail-grow font-black" />
+                        <span className="ml-2 font-bold">Resume</span>
+                    </Link>
                 </div>
                 <div className="medias h-full flex flex-col justify-end">
                     <FiDribbble onClick={()=>window.open('https://dribbble.com/kabundege')}  size={30} className="icon hover:text-green-400" />
