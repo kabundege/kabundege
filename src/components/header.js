@@ -3,6 +3,7 @@ import { useState,useEffect } from "react";
 import { HiOutlineMenuAlt4 } from "react-icons/hi";
 import { AiOutlineClose } from "react-icons/ai";
 import { NavHashLink } from 'react-router-hash-link'
+import Darkreader from "react-darkreader";
 
 const Header = () => {
     const [ showModal,setModal ] = useState(false)
@@ -46,11 +47,14 @@ const Header = () => {
             <div>
                 <h1 className="brand font-black">ckk</h1>
             </div>
-            {
-                showModal ?
-                <AiOutlineClose size={30} className="icon" onClick={()=>toggleMenu()} />:
-                <HiOutlineMenuAlt4 size={30} className="icon" onClick={()=>toggleMenu()} />
-            }
+            <div className="flex items-center">
+                <Darkreader />
+                {
+                    showModal ?
+                    <AiOutlineClose size={30} className="icon ml-5" onClick={()=>toggleMenu()} />:
+                    <HiOutlineMenuAlt4 size={30} className="icon ml-5" onClick={()=>toggleMenu()} />
+                }
+            </div>
             {
                 showModal &&
                 <section >
