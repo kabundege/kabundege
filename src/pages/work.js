@@ -42,6 +42,10 @@ const Work = () => {
         }
     ]
 
+    const handleOpen = (link) => {
+        window.open(link,window.innerWidth,window.innerHeight)
+    }
+
     return (
         <div id="work" className="relative grid grid-cols-1 overflow-y-scroll">
             <section className="fixed pointer-events-none -z-10 flex left-0 top-0 w-1/2 h-full">
@@ -65,7 +69,7 @@ const Work = () => {
             {
                 React.Children.toArray(
                     data.map((one,index) => 
-                        <div className={`w-1/4 ${ index%2 ? "ml-1/4" :'ml-auto'}`} style={{ marginTop: index ? '-4.5em' : '4em' }} >
+                        <div onClick={() => handleOpen(one.link)} className={`w-1/4 ${ index%2 ? "ml-1/4" :'ml-auto'}`} style={{ marginTop: index ? '-4.5em' : '4em' }} >
                             <div className="flex justify-between items-end px-3">
                                 <h3 className="text-xl font-medium text-gray-600">{one.title}</h3>
                                 <h1 className="text-7xl font-black text-green-600">{index + 1}</h1>

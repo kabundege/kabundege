@@ -21,6 +21,13 @@ const About = () =>{
         for(const tag of tags){
             observer.observe(tag)
         }
+
+        return () => {
+            /**
+             *  cleanup function
+             */
+            observer.disconnect()
+        }
     }, [])
     
     const data = [
